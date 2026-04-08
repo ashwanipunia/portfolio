@@ -1,11 +1,72 @@
-/* Fade-in animation */
+:root {
+  --bg:#ffffff;
+  --text:#111827;
+  --card:#f3f4f6;
+  --accent:#2563eb;
+}
+
+body.dark {
+  --bg:#020617;
+  --text:#e5e7eb;
+  --card:#111827;
+}
+
+body {
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:1rem;
+  border-bottom:1px solid #ccc;
+}
+
+.navbar a {
+  margin-right:1rem;
+  color:var(--text);
+  text-decoration:none;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:2rem;
+}
+
+.card {
+  background:var(--card);
+  padding:1rem;
+  margin-bottom:1rem;
+  border-radius:8px;
+}
+
+.metrics {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1rem;
+}
+
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.8s;
 }
 
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity:1;
+  transform:translateY(0);
 }
+
+.filters {
+  display:flex;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+
+body[data-profile="industry"] .academic-only {display:none;}
+body[data-profile="academic"] .industry-only {display:none;}
+``
