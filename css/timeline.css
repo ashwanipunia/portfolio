@@ -1,0 +1,20 @@
+.timeline {
+  border-left: 3px solid #2563eb;
+  padding-left: 2rem;
+}
+
+.event {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}
