@@ -1,31 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Publications | Ashwani Punia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+fetch("data/publications.json")
+.then(r => r.json())
+.then(data => {
+  const list = document.getElementById("publicationList");
+  const y = document.getElementById("yearFilter");
+  const j = document.getElementById("journalFilter");
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  [...new Set(data.map(p=>p.year))].forEach(v=>y.innerHTML+=``);
+  [...new Set(data.map(p=>p.journal))].forEach(v=>j.innerHTML+=``);
 
-<body>
+  function render(){
+    list.innerHTML="";
+    data.filter(p =>
+      (y.value==="all" || p.year==y.value) &&
+      (j.value==="all" || p.journal==j.value)
+    ).forEach(p=>{
+      list.innerHTML+=`
+        <div class="pub-card">
+          <h4>${p.title}</h4>
+          <p>${p.journal} (${p.year}) — IF ${p.impact}</p>
+        </div>`;
+    });
+  }
 
-<header class="navbar">
-  <h1>Publications</h1>
-  <nav>
-    <a href="index.html">← Back</a>
-    <button id="themeToggle">🌙</button>
-  </nav>
-</header>
-
-<main class="container">
-  <div id="publicationList">
-    <p>Loading publications...</p>
-  </div>
-</main>
-
-<script src="js/theme.js"></script>
-js/publications.js"></script>
- <script src="js/animations.js"></script>
-</body>
-</html>
+  y.onchange = j.onchange = render;
+  render();
+});
+``
