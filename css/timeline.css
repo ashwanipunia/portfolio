@@ -1,5 +1,25 @@
 .timeline {
   border-left: 3px solid #2563eb;
+  padding-left: 1.75rem;
+  margin-top: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}.timeline {
+  border-left: 3px solid #2563eb;
   padding-left: 2rem;
 }
 
