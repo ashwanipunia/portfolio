@@ -1,124 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ashwani Punia | PhD Research Scientist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="Ashwani Punia, PhD – Research Scientist specializing in Metabolomics, Proteomics and Mass Spectrometry">
-  <meta name="keywords" content="Ashwani Punia, Metabolomics, Proteomics, Mass Spectrometry, PhD Researcher">
+  <title>Ashwani Punia | PhD Portfolio</title>
 
-  <!-- Stylesheets -->
+  <!-- ✅ CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-profile="academic">
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <h1>Ashwani Punia</h1>
+<nav id="navbar">
+  <div class="nav-container">
+    <h1 class="logo">Ashwani Punia</h1>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="publications.html">Publications</a>
-      <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-    </nav>
-  </header>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="assets/Ashwani_Punia_CV.pdf" download>Download CV</a></li>
+    </ul>
 
-  <!-- ================= MAIN ================= -->
-  <main class="container">
+    <select id="profileToggle">
+      <option value="academic">Academic</option>
+      <option value="industry">Industry</option>
+    </select>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="fade-in">
-      <h2>About Me</h2>
-      <p>
-        I am a doctoral researcher specializing in metabolomics,
-        proteomics, and mass spectrometry–driven analytical research.
-        My work focuses on method development, multi‑omics data
-        integration, and the discovery of bioactive metabolites from
-        medicinal plants.
-      </p>
-    </section>
+    <button id="themeToggle">🌙</button>
 
-    <!-- ===== ACADEMIC TIMELINE ===== -->
-    <section class="fade-in">
-      <h2>Academic Timeline</h2>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <strong>2020 – 2025</strong>
-          <p>
-            <strong>PhD, Biological Sciences</strong><br>
-            CSIR – Institute of Himalayan Bioresource Technology (IHBT), Palampur
-          </p>
-        </div>
+<section id="hero" class="fade-in">
+  <div class="hero-content">
+    <h1>Hi, I'm Ashwani Punia, PhD</h1>
+    <h2>Biochemist & Mass Spectrometry Specialist</h2>
+    <p>Metabolomics • Proteomics • Phytochemistry</p>
+  </div>
+</section>
 
-        <div class="timeline-item">
-          <strong>2018 – 2020</strong>
-          <p>
-            <strong>M.Tech, Agricultural Biotechnology</strong><br>
-            Indian Institute of Technology (IIT) Kharagpur
-          </p>
-        </div>
+<section id="about" class="fade-in container">
+  <h2 class="section-title">About Me</h2>
+  <p class="about-text">
+    Biochemist with 5+ years of experience in mass spectrometry–
+    driven metabolomics and proteomics research.
+  </p>
+</section>
 
-        <div class="timeline-item">
-          <strong>2016 – 2018</strong>
-          <p>
-            <strong>M.Sc, Biotechnology</strong><br>
-            Central University of Haryana
-          </p>
-        </div>
+<section class="fade-in academic-only container">
+  <div class="card-grid">
+    <div class="pub-card">Publications<br><strong>7</strong></div>
+    <div class="pub-card">Citations<br><strong>45</strong></div>
+    <div class="pub-card">h‑Index<br><strong>3</strong></div>
+  </div>
+</section>
 
-        <div class="timeline-item">
-          <strong>2012 – 2016</strong>
-          <p>
-            <strong>B.Sc</strong><br>
-            Maharshi Dayanand University, Rohtak
-          </p>
-        </div>
+<section id="experience" class="fade-in container">
+  <h2 class="section-title">Research Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">2020–2025</div>
+      <div class="timeline-content">
+        <h3>PhD Researcher – CSIR‑IHBT</h3>
+        <ul>
+          <li>UHPLC‑DAD‑QTOF‑IMS method development</li>
+          <li>Metabolomics & proteomics integration</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ===== SKILLS ===== -->
-    <section class="fade-in">
-      <h2>Core Expertise</h2>
+<section id="contact" class="bg-light fade-in container">
+  <h2 class="section-title">Contact</h2>
+  <p>
+    📧 ashwani.ihbt20a@acsir.res.in<br>
+    📞 +91‑7206551518
+  </p>
+</section>
 
-      <ul>
-        <li>Metabolomics, Proteomics & Lipidomics</li>
-        <li>LC‑MS/MS, UHPLC‑IMS‑QTOF, MALDI‑TOF</li>
-        <li>Analytical Method Development & Validation</li>
-        <li>Mass‑Spectrometry Data Analysis</li>
-        <li>Molecular Docking & Network Biology</li>
-        <li>Scientific Writing & Publishing</li>
-      </ul>
-    </section>
+<footer>
+  <p>© 2026 Ashwani Punia</p>
+</footer>
 
-    <!-- ===== CONTACT ===== -->
-    <section class="fade-in">
-      <h2>Contact</h2>
-
-      <p>
-        📧 ashwani.ihbt20a@acsir.res.in<br>
-        📞 +91‑7206551518<br>
-        🔗 <a href="https://www.linkedin.com/in/ashwani-punia-a8b10917b/" target="_blank">
-          LinkedIn Profile
-        </a>
-      </p>
-    </section>
-
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="container">
-    <p>© 2026 Ashwani Punia. All rights reserved.</p>
-  </footer>
-
-  <!-- ================= SCRIPTS ================= -->
-  <script src="js/theme.js"></script>
-  <script src="js/animations.js"></script>
+<!-- ✅ SCRIPTS (ORDER MATTERS) -->
+<script src="js/script.js"></script>
+js/theme.jsscript>
+js/profile.js</script>
 
 </body>
 </html>
-``
