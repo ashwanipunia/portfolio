@@ -1,54 +1,11 @@
-/* ---------- THEME VARIABLES ---------- */
-:root {
-  --bg: #ffffff;
-  --text: #111827;
-  --card: #f3f4f6;
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-body.dark {
-  --bg: #020617;
-  --text: #e5e7eb;
-  --card: #111827;
-}
-
-/* ---------- BASE ---------- */
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-}
-
-/* ---------- NAVBAR ---------- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.navbar a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: var(--text);
-}
-
-.navbar button {
-  cursor: pointer;
-}
-
-/* ---------- LAYOUT ---------- */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-/* ---------- CARDS ---------- */
-.card {
-  background: var(--card);
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
