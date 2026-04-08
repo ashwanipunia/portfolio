@@ -1,102 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Ashwani Punia | PhD Portfolio</title>
-
-  <!-- ✅ CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ashwani Punia, PhD - Biochemist, Metabolomics and Proteomics Researcher.">
+    <title>Ashwani Punia, PhD | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body data-profile="academic">
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><img src="D:\to_fill_form\FACE.JPG"  width="100" height="100"></h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-<nav id="navbar">
-  <div class="nav-container">
-    <h1 class="logo">Ashwani Punia</h1>
+    <section id="hero" class="fade-in">
+        <div class="hero-content">
+            <h1>Hi, I'm Ashwani Punia, PhD </h1>
+            <h2>Biochemist & Mass Spectrometry Specialist</h2>
+            <p>Passionate about phytochemistry, metabolomics, and proteomics.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary-btn">Contact Me</a>
+                <a href="#publications" class="btn secondary-btn">View Research</a>
+            </div>
+        </div>
+    </section>
 
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="assets/Ashwani_Punia_CV.pdf" download>Download CV</a></li>
-    </ul>
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                As a resourceful and dedicated biochemist, I have over five years of experience in research using mass spectrometry. I specialize in metabolomics, proteomics, and lipidomics using mass spectrometry with chemometric analysis. My expertise includes a strong background in a variety of chromatographic and spectrometric instruments, such as HPLC, UPLC, MALDI-TOF-TOF-MS, and GC-MS. I am dedicated to developing novel extraction, isolation, and separation techniques for biomolecules.
+            </p>
+        </div>
+    </section>
 
-    <select id="profileToggle">
-      <option value="academic">Academic</option>
-      <option value="industry">Industry</option>
-    </select>
+    <section id="skills" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Technical Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-microscope skill-icon"></i>
+                    <h3>Mass Spectrometry</h3>
+                    <p>DIA/DDA, Medicinal Proteomics, Intact Protein Analysis, PTM Analysis.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-vials skill-icon"></i>
+                    <h3>Analytical Chemistry</h3>
+                    <p>HPLC/UHPLC, LC MS/MS, FPLC (AKTA pure), Ultracentrifugation.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-dna skill-icon"></i>
+                    <h3>Biochemistry</h3>
+                    <p>Mammalian Cell Culture, Enzyme Assays & Kinetics, Antimicrobial Screening.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code skill-icon"></i>
+                    <h3>Computational Biology</h3>
+                    <p>Molecular Docking, Network biology, MS DIAL, MetaboAnalyst, Statistical Analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <button id="themeToggle">🌙</button>
+    <section id="experience" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Research Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2020 - Dec 2025 </div>
+                    <div class="timeline-content">
+                        <h3>PhD Researcher (Biological Sciences)</h3>
+                        <h4>CSIR-IHBT, Palampur, HP, India </h4>
+                        <ul>
+                            <li>Developed and validated a rapid method for quantifying alkaloids from <i>Aconitum heterophyllum</i> using UHPLC-DAD-QTOF-IMS.</li>
+                            <li>Constructed a comprehensive metabolite reference map identifying 266 compounds.</li>
+                            <li>Performed molecular docking identifying 80 bioactive compounds with therapeutic potential.</li>
+                            <li>Conducted transcriptomic/metabolomic studies uncovering light-dependent regulation of aconite biosynthesis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-  </div>
-</nav>
+    <section id="education" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Ph.D. in Biological Sciences </h3>
+                        <p>Academy of Scientific & Innovative Research (ACSIR), CSIR-IHBT, Palampur, India </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>M.Tech in Agricultural Biotechnology </h3>
+                        <p>Indian Institute of Technology-Kharagpur, West Bengal, India </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <h3>M.Sc in Biotechnology </h3>
+                        <p>Central University of Haryana, Jant-Pali, India </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="hero" class="fade-in">
-  <div class="hero-content">
-    <h1>Hi, I'm Ashwani Punia, PhD</h1>
-    <h2>Biochemist & Mass Spectrometry Specialist</h2>
-    <p>Metabolomics • Proteomics • Phytochemistry</p>
-  </div>
-</section>
+    <section id="publications" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Total Publications: 7 | Citations: 45 | h-index: 3 </p>
+            <div class="card-grid">
+                <div class="pub-card">
+                    <h4>Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model.</h4>
+                    <p>Journal of Proteome Research (IF-3.6) - 2026 </p>
+                </div>
+                <div class="pub-card">
+                    <h4>Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis.</h4>
+                    <p>Critical Reviews in Biotechnology (IF-7.7) - 2026 </p>
+                </div>
+<div class="pub-card">
+                    <h4> Mass Spectrometry-Based Methods for Plant Metabolite Profiling. </h4>
+                    <p> Plant Stress Memory: Methods and Protocols - 2025 </p>
+                </div>
+<div class="pub-card">
+                    <h4>Proteomic and metabolomic insights into seed germination of <i>Ferula assa-foetida</i>.</h4>
+                    <p>Journal of Proteomics (IF-2.8) - 2024 </p>
+                </div>
+<div class="pub-card">
+                    <h4> Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants. </h4>
+                    <p> Industrial Crops and Products (IF-6.2) - 2024 </p>
+                </div>
+<div class="pub-card">
+                    <h4> Identification and quantification of eight alkaloids in Aconitum heterophyllum using UHPLC‐DAD‐QTOF‐IMS: A valuable tool for quality control. </h4>
+                    <p> Phytochemical Analysis (IF-2.6) - 2022 </p>
+                </div>
+<div class="pub-card">
+                    <h4> In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map using mass spectrometry. </h4>
+                    <p> BMC Plant Biology (IF-4.8) - 2021 </p>
+                </div>
 
-<section id="about" class="fade-in container">
-  <h2 class="section-title">About Me</h2>
-  <p class="about-text">
-    Biochemist with 5+ years of experience in mass spectrometry–
-    driven metabolomics and proteomics research.
-  </p>
-</section>
 
-<section class="fade-in academic-only container">
-  <div class="card-grid">
-    <div class="pub-card">Publications<br><strong>7</strong></div>
-    <div class="pub-card">Citations<br><strong>45</strong></div>
-    <div class="pub-card">h‑Index<br><strong>3</strong></div>
-  </div>
-</section>
+                
+            </div>
+        </div>
+    </section>
 
-<section id="experience" class="fade-in container">
-  <h2 class="section-title">Research Experience</h2>
+    <section id="contact" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:ashwanipunia@yahoo.com">ashwanipunia@yahoo.com</a> </p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91-7206551518 (India) </p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>CSIR-IHBT, Palampur, H.P. India </p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ashwani-punia-a8b10917b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=cunYBgoAAAAJ" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="https://www.researchgate.net/profile/Ashwani-Punia-2?ev=hdr_xprf" target="_blank"><i class="fab fa-researchgate"></i></a>
+            </div>
+        </div>
+    </section>
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-date">2020–2025</div>
-      <div class="timeline-content">
-        <h3>PhD Researcher – CSIR‑IHBT</h3>
-        <ul>
-          <li>UHPLC‑DAD‑QTOF‑IMS method development</li>
-          <li>Metabolomics & proteomics integration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <footer>
+        <p>&copy; 2026 Ashwani Punia. All Rights Reserved.</p>
+    </footer>
 
-<section id="contact" class="bg-light fade-in container">
-  <h2 class="section-title">Contact</h2>
-  <p>
-    📧 ashwani.ihbt20a@acsir.res.in<br>
-    📞 +91‑7206551518
-  </p>
-</section>
-
-<footer>
-  <p>© 2026 Ashwani Punia</p>
-</footer>
-
-<!-- ✅ SCRIPTS (ORDER MATTERS) -->
-<script src="js/script.js"></script>
-js/theme.jsscript>
-js/profile.js</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
