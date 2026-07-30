@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Ashwani Punia, PhD - Biochemist, Metabolomics and Proteomics Researcher.">
     <title>Ashwani Punia, PhD | Portfolio</title>
+    <script>
+      (function() {
+        try {
+          const saved = localStorage.getItem('theme');
+          if (saved) {
+            document.documentElement.setAttribute('data-theme', saved);
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -25,6 +39,8 @@
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
+            <!-- Theme toggle -->
+            <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false" class="theme-toggle"><i class="fas fa-moon"></i></button>
         </div>
     </nav>
 
@@ -138,19 +154,17 @@
             
             <div class="card-grid">
                 <div class="pub-card">
-                    <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809"><h4>Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model.</h4>
+                    <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809"><h4>Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopath[...]
                     <p>Journal of Proteome Research (IF-3.6) - 2026 </p></a>
                 </div>
                 <div class="pub-card">
-                    <a href="https://www.tandfonline.com/doi/full/10.1080/07388551.2026.2619534"><h4>Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis.</h4>
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/07388551.2026.2619534"><h4>Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis.[...]
                     <p>Critical Reviews in Biotechnology (IF-7.7) - 2026 </p></a>
                 </div>
 <div class="pub-card">
                     <a href="https://link.springer.com/protocol/10.1007/978-1-0716-4981-7_10"><h4> Mass Spectrometry-Based Methods for Plant Metabolite Profiling. </h4>
                     <p> Plant Stress Memory: Methods and Protocols - 2025 </p></a>
                 </div>
-
-
 
 
 
@@ -167,7 +181,7 @@
 <h1>List of publications</h1>
     <ul class="square-list">
       <li>
-        <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809"><h4>Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model.</h4>
+        <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809"><h4>Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a ze[...]
                     <p>Journal of Proteome Research (IF-3.6) - 2026 </p>
 </a>
       </li>
@@ -184,7 +198,7 @@
                     <p> In Ethnomedicinal Plants for Drug Discovery: Current Developments (pp. 443-462). Singapore: Springer Nature Singapore. 2024 </p></a>
       </li>
       <li>
-        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926669024018326"><h4> Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants. </h4>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926669024018326"><h4> Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants. [...]
                     <p> Industrial Crops and Products (IF-6.2) - 2024 </p></a>
       </li>
       <li>
@@ -192,11 +206,11 @@
                     <p>Journal of Proteomics (IF-2.8) - 2024 </p></a>
       </li>
       <li>
-        <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3164"><h4> Identification and quantification of eight alkaloids in Aconitum heterophyllum using UHPLC‐DAD‐QTOF‐IMS: A valuable tool for quality control.</h4>
+        <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3164"><h4> Identification and quantification of eight alkaloids in Aconitum heterophyllum using UHPLC‐[...]
                     <p> Phytochemical Analysis (IF-2.6) - 2022 </p></a>
       </li>
       <li>
-        <h4><a href="https://link.springer.com/article/10.1186/s12870-021-03394-8"> In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map using mass spectrometry.</h4>
+        <h4><a href="https://link.springer.com/article/10.1186/s12870-021-03394-8"> In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map using mass spectrometry.</h[...]
                     <p> BMC Plant Biology (IF-4.8) - 2021 </p></a>
       </li>
 
