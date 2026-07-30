@@ -1,11 +1,42 @@
-/* Base Styles & Variables */
+/* Theme variables -------------------------------------------------- */
 :root {
     --primary-color: #0d47a1; /* Deep Professional Blue */
     --secondary-color: #00838f; /* Scientific Teal */
     --text-color: #333;
+    --muted-text: #5b5b5b;
     --light-bg: #f8f9fa;
+    --card-bg: #ffffff;
     --white: #ffffff;
     --transition: all 0.3s ease;
+}
+
+/* Dark theme overrides — applied when <html data-theme="dark"> */
+[data-theme="dark"] {
+    --primary-color: #58a6ff;    /* lighter blue for dark background */
+    --secondary-color: #2bd4c6;
+    --text-color: #e6eef6;
+    --muted-text: #c0cee0;
+    --light-bg: #071025;
+    --card-bg: #081226;
+    --white: #0b1220;
+}
+
+/* Respect system preference if no explicit theme saved */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary-color: #58a6ff;
+        --secondary-color: #2bd4c6;
+        --text-color: #e6eef6;
+        --muted-text: #c0cee0;
+        --light-bg: #071025;
+        --card-bg: #081226;
+        --white: #0b1220;
+    }
+}
+
+/* Base Styles & Variables */
+:root {
+    /* fallback values already defined above for non-dark systems */
 }
 
 * {
@@ -67,7 +98,7 @@ section {
 
 /* Navigation */
 #navbar {
-    background: var(--white);
+    background: var(--card-bg);
     position: fixed;
     top: 0;
     width: 100%;
@@ -190,7 +221,7 @@ section {
 }
 
 .skill-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -239,7 +270,7 @@ section {
     right: auto;
     left: 13px;
     top: 25px;
-    background: var(--white);
+    background: var(--card-bg);
     border: 3px solid var(--secondary-color);
     border-radius: 50%;
     z-index: 1;
@@ -268,7 +299,7 @@ section {
 }
 
 .pub-card {
-    background: var(--white);
+    background: var(--card-bg);
     border-left: 4px solid var(--secondary-color);
     padding: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
@@ -341,7 +372,7 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background: var(--white);
+        background: var(--card-bg);
         text-align: center;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
@@ -358,3 +389,16 @@ footer {
         font-size: 2.5rem;
     }
 }
+
+/* Theme toggle button (basic appearance) */
+.theme-toggle{
+    margin-left: 16px;
+    background: transparent;
+    border: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+}
+.theme-toggle:focus{ outline: 2px solid rgba(88,166,255,0.25); outline-offset: 2px; }
