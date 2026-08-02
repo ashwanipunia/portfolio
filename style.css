@@ -151,11 +151,29 @@ section {
     z-index: 1;
 }
 
-/* About Section - Subtle Wave Animation */
+/* About Section - Subtle Wave Animation with Dark Mode Support */
 #about {
     background: var(--white);
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,247,250,1) 100%);
     animation: pulse-bg 8s ease-in-out infinite;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #about {
+    background: linear-gradient(135deg, #081226 0%, #0a1530 100%);
+    color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) #about {
+        background: linear-gradient(135deg, #081226 0%, #0a1530 100%);
+        color: var(--text-color);
+    }
+}
+
+#about .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Skills Section - Animated Light Background */
@@ -179,6 +197,12 @@ section {
     pointer-events: none;
 }
 
+[data-theme="dark"] #skills::before {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(88, 166, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(43, 212, 198, 0.05) 0%, transparent 50%);
+}
+
 #skills .container {
     position: relative;
     z-index: 1;
@@ -189,6 +213,23 @@ section {
     background: linear-gradient(135deg, #ffffff 0%, #e8f4f8 50%, #d4e8f0 100%);
     background-size: 300% 300%;
     animation: gradientShift 14s ease infinite;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #experience {
+    background: linear-gradient(135deg, #081226 0%, #0a1f35 50%, #09293a 100%);
+    color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) #experience {
+        background: linear-gradient(135deg, #081226 0%, #0a1f35 50%, #09293a 100%);
+    }
+}
+
+#experience .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Education Section - Alternating Glow */
@@ -197,6 +238,17 @@ section {
     background-size: 300% 300%;
     animation: gradientShift 16s ease infinite;
     position: relative;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #education {
+    background: linear-gradient(135deg, #071025, #0f0a1a, #071025);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) #education {
+        background: linear-gradient(135deg, #071025, #0f0a1a, #071025);
+    }
 }
 
 #education::after {
@@ -210,6 +262,10 @@ section {
     animation: float 20s ease-in-out infinite;
 }
 
+[data-theme="dark"] #education::after {
+    background: radial-gradient(circle, rgba(43, 212, 198, 0.03) 0%, transparent 70%);
+}
+
 #education .container {
     position: relative;
     z-index: 1;
@@ -221,6 +277,17 @@ section {
     background-size: 300% 300%;
     animation: gradientShift 13s ease infinite;
     position: relative;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #publications {
+    background: linear-gradient(135deg, #081226 0%, #0f0a1a 50%, #0a0815 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) #publications {
+        background: linear-gradient(135deg, #081226 0%, #0f0a1a 50%, #0a0815 100%);
+    }
 }
 
 #publications::before {
@@ -237,6 +304,12 @@ section {
     pointer-events: none;
 }
 
+[data-theme="dark"] #publications::before {
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(88, 166, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(43, 212, 198, 0.08) 0%, transparent 50%);
+}
+
 #publications .container {
     position: relative;
     z-index: 1;
@@ -248,6 +321,17 @@ section {
     background-size: 400% 400%;
     animation: gradientShift 18s ease infinite;
     position: relative;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #contact {
+    background: linear-gradient(135deg, #071025, #0f0a1a, #0a1530, #071025);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) #contact {
+        background: linear-gradient(135deg, #071025, #0f0a1a, #0a1530, #071025);
+    }
 }
 
 #contact::before {
@@ -262,6 +346,12 @@ section {
         radial-gradient(circle at 75% 70%, rgba(13, 71, 161, 0.1) 0%, transparent 40%);
     animation: pulse-bg 12s ease-in-out infinite;
     pointer-events: none;
+}
+
+[data-theme="dark"] #contact::before {
+    background: 
+        radial-gradient(circle at 25% 30%, rgba(43, 212, 198, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 75% 70%, rgba(88, 166, 255, 0.1) 0%, transparent 40%);
 }
 
 #contact .container {
@@ -374,6 +464,7 @@ section {
     text-align: justify;
     max-width: 800px;
     margin: 0 auto;
+    color: var(--text-color);
 }
 
 /* Skills Grid */
@@ -390,6 +481,7 @@ section {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: var(--transition);
+    color: var(--text-color);
 }
 
 .skill-card:hover {
@@ -452,6 +544,11 @@ section {
 .timeline-content ul {
     list-style: disc inside;
     margin-top: 10px;
+    color: var(--text-color);
+}
+
+.timeline-content p {
+    color: var(--text-color);
 }
 
 /* Publications Cards */
@@ -466,11 +563,17 @@ section {
     border-left: 4px solid var(--secondary-color);
     padding: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    color: var(--text-color);
 }
 
 .pub-card h4 {
     margin-bottom: 10px;
     font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.pub-card p {
+    color: var(--text-color);
 }
 
 /* Contact */
@@ -490,6 +593,10 @@ section {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 10px;
+}
+
+.contact-item p {
+    color: var(--text-color);
 }
 
 .social-links {
