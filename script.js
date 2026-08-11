@@ -2,14 +2,30 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = hamburger.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+    });
+}
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        if (navLinks) {
+            navLinks.classList.remove('active');
+        }
+        if (hamburger) {
+            const icon = hamburger.querySelector('i');
+            if (icon) {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        }
     });
 });
 
@@ -17,7 +33,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.10
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -42,7 +58,6 @@ document.querySelectorAll('.fade-in').forEach(section => {
         try {
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            // update aria and icon
             const isDark = theme === 'dark';
             toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
             toggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
