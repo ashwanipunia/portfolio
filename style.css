@@ -57,6 +57,153 @@
     }
 }
 
+/* Motion Graphics & Section Layout Specs ---------------------------------- */
+.hero-svg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#hero-vector-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.skills-3d-container {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.collaborative-cursors-wrapper {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+
+.collab-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    z-index: 20;
+}
+
+.cursor-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+}
+
+.education-morph-wrapper {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.copy-citation-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--muted-text);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.copy-citation-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.copy-citation-btn.copied {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+#liquid-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#contact {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hardware Acceleration & Reduced Motion Rules ---------------------------- */
+.hero-content,
+.interest-card,
+.skill-card,
+.award-card,
+.publication-item,
+.contact-card,
+.collab-cursor,
+.skills-3d-container {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .hero-badge,
+    .hero-content h1,
+    .interest-icon-wrapper,
+    .skill-icon,
+    .award-icon,
+    .contact-icon,
+    .collab-cursor {
+        animation: none !important;
+        transform: none !important;
+    }
+    #skills-3d-visualizer,
+    #liquid-canvas,
+    .education-morph-wrapper {
+        display: none !important;
+    }
+}
+
 /* Base Styles ------------------------------------------------------------- */
 * {
     margin: 0;

@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animation Libraries: GSAP, ScrollTrigger, Three.js, Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
 
@@ -57,6 +62,14 @@
 
     <!-- Hero Section -->
     <section id="hero" class="fade-in">
+        <div class="hero-svg-overlay">
+            <svg id="hero-vector-svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <path id="hero-path-1" class="hero-path" d="M 100 150 Q 300 50 500 200 T 900 150" fill="none" stroke="var(--primary-color)" stroke-width="2" opacity="0.4"/>
+                <path id="hero-path-2" class="hero-path" d="M 50 400 C 250 250 450 500 700 350 S 950 450 1000 300" fill="none" stroke="var(--accent-color)" stroke-width="2" opacity="0.3"/>
+                <circle cx="500" cy="200" r="6" fill="var(--secondary-color)" class="hero-ambient-node"/>
+                <circle cx="700" cy="350" r="8" fill="var(--accent-color)" class="hero-ambient-node"/>
+            </svg>
+        </div>
         <div class="hero-content">
             <div class="hero-badge">Academic Portfolio</div>
             <h1>Dr. Ashwani Punia</h1>
@@ -131,6 +144,8 @@
     <section id="skills" class="fade-in">
         <div class="container">
             <h2 class="section-title">Technical Competencies</h2>
+            <!-- Interactive 3D Three.js Skill Canvas Container -->
+            <div id="skills-3d-visualizer" class="skills-3d-container"></div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fas fa-microscope skill-icon"></i>
@@ -165,6 +180,8 @@
     <section id="experience" class="bg-light fade-in">
         <div class="container">
             <h2 class="section-title">Research Experience</h2>
+            <!-- Multi-User Cursor Collaborative Container -->
+            <div id="collaborative-cursors-container" class="collaborative-cursors-wrapper"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">Aug 2020 - Dec 2025</div>
@@ -187,6 +204,11 @@
     <section id="education" class="fade-in">
         <div class="container">
             <h2 class="section-title">Education</h2>
+            <div class="education-morph-wrapper">
+                <svg id="education-morph-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path id="education-morph-path" fill="var(--accent-color)" opacity="0.15" d="M38.8,-53.2C50.2,-43.8,59.3,-32.1,63.1,-18.8C66.8,-5.5,65.3,9.4,59.7,22.7C54.1,36,44.5,47.8,32.2,55.5C19.9,63.2,5,66.8,-9.5,65.1C-24,63.4,-38,56.4,-48.9,45.8C-59.8,35.2,-67.5,21,-68.8,6.2C-70.1,-8.6,-65,-24,-55.8,-35.1C-46.6,-46.2,-33.3,-53.1,-20.2,-55.7C-7.1,-58.3,5.8,-56.6,18.8,-55.2Z" transform="translate(100 100)" />
+                </svg>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">2020 - 2025</div>
@@ -270,11 +292,12 @@
             <div class="publications-list">
 
                 <!-- Publication 1 -->
-                <div class="publication-item">
+                <div class="publication-item" data-citation="Thakur S, Kumari S, Punia A, Patial V, Singh D, Kumar R. Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model. J Proteome Res (2026). DOI: 10.1021/acs.jproteome.5c00809">
                     <div class="pub-badges">
                         <span class="pub-badge year-badge">2026</span>
                         <span class="pub-badge if-badge">IF 3.8</span>
                         <span class="pub-badge type-badge">Journal Article</span>
+                        <button class="copy-citation-btn" title="Copy Citation"><i class="fas fa-quote-left"></i> <span class="btn-text">Copy Citation</span></button>
                     </div>
                     <h3 class="pub-title">
                         <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809" target="_blank">
@@ -433,6 +456,17 @@
 
     <!-- Contact Section -->
     <section id="contact" class="bg-light fade-in">
+        <!-- SVG Liquid Filter & Background Canvas -->
+        <canvas id="liquid-canvas"></canvas>
+        <svg style="display: none;">
+            <defs>
+                <filter id="liquid-filter">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="liquid" />
+                    <feBlend in="SourceGraphic" in2="liquid" />
+                </filter>
+            </defs>
+        </svg>
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="contact-lead">Please feel free to connect for scientific collaborations, research opportunities, or academic discussions.</p>
