@@ -71,6 +71,7 @@ body {
     background-color: var(--white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 html {
@@ -228,8 +229,14 @@ section {
     color: var(--primary-color);
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 /* Nav CV Button */
@@ -294,6 +301,8 @@ section {
     color: var(--muted-text);
     margin-bottom: 24px;
     font-weight: 600;
+    animation: heroFadeSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.1s;
 }
 
 #hero h1 {
@@ -301,6 +310,8 @@ section {
     letter-spacing: -1px;
     margin-bottom: 16px;
     color: var(--primary-color);
+    animation: heroFadeSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.25s;
 }
 
 #hero h2 {
@@ -309,6 +320,8 @@ section {
     color: var(--secondary-color);
     font-weight: 500;
     margin-bottom: 24px;
+    animation: heroFadeSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.4s;
 }
 
 .hero-lead {
@@ -316,6 +329,8 @@ section {
     color: var(--muted-text);
     margin-bottom: 40px;
     line-height: 1.8;
+    animation: heroFadeSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.55s;
 }
 
 .cta-buttons {
@@ -323,6 +338,19 @@ section {
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
+    animation: heroFadeSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.7s;
+}
+
+@keyframes heroFadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .btn {
@@ -443,9 +471,15 @@ section {
 }
 
 .interest-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
     border-color: var(--secondary-color);
+}
+
+.interest-card:hover .interest-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    background-color: var(--secondary-color);
+    color: var(--white);
 }
 
 .interest-icon-wrapper {
@@ -460,6 +494,7 @@ section {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--border-color);
+    transition: var(--transition);
 }
 
 .interest-card h3 {
@@ -490,15 +525,21 @@ section {
 }
 
 .skill-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--primary-color);
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.15);
+    color: var(--primary-color);
 }
 
 .skill-icon {
     font-size: 1.8rem;
     color: var(--accent-color);
     margin-bottom: 16px;
+    transition: var(--transition);
 }
 
 .skill-card h3 {
@@ -710,7 +751,7 @@ section {
 .publication-item:hover {
     border-color: var(--secondary-color);
     box-shadow: var(--shadow-md);
-    transform: scale(1.005);
+    transform: translateY(-2px);
 }
 
 .pub-badges {
@@ -946,16 +987,77 @@ footer p {
     color: var(--secondary-color) !important;
 }
 
-/* Animations -------------------------------------------------------------- */
+/* Animations & Staggered Scroll Reveal ------------------------------------ */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(25px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Staggered entry for grid items inside visible sections */
+.fade-in .interest-card,
+.fade-in .skill-card,
+.fade-in .award-card,
+.fade-in .publication-item,
+.fade-in .timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+}
+
+.fade-in.visible .interest-card,
+.fade-in.visible .skill-card,
+.fade-in.visible .award-card,
+.fade-in.visible .publication-item,
+.fade-in.visible .timeline-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cascade delays */
+.fade-in.visible .interest-card:nth-child(1),
+.fade-in.visible .skill-card:nth-child(1),
+.fade-in.visible .award-card:nth-child(1),
+.fade-in.visible .publication-item:nth-child(1),
+.fade-in.visible .timeline-item:nth-child(1) { transition-delay: 0.1s; }
+
+.fade-in.visible .interest-card:nth-child(2),
+.fade-in.visible .skill-card:nth-child(2),
+.fade-in.visible .award-card:nth-child(2),
+.fade-in.visible .publication-item:nth-child(2),
+.fade-in.visible .timeline-item:nth-child(2) { transition-delay: 0.2s; }
+
+.fade-in.visible .interest-card:nth-child(3),
+.fade-in.visible .skill-card:nth-child(3),
+.fade-in.visible .award-card:nth-child(3),
+.fade-in.visible .publication-item:nth-child(3),
+.fade-in.visible .timeline-item:nth-child(3) { transition-delay: 0.3s; }
+
+.fade-in.visible .interest-card:nth-child(4),
+.fade-in.visible .skill-card:nth-child(4),
+.fade-in.visible .award-card:nth-child(4),
+.fade-in.visible .publication-item:nth-child(4) { transition-delay: 0.4s; }
+
+.fade-in.visible .skill-card:nth-child(5),
+.fade-in.visible .publication-item:nth-child(5) { transition-delay: 0.5s; }
+
+.fade-in.visible .publication-item:nth-child(6) { transition-delay: 0.6s; }
+.fade-in.visible .publication-item:nth-child(7) { transition-delay: 0.7s; }
+.fade-in.visible .publication-item:nth-child(8) { transition-delay: 0.8s; }
+
+/* Reduced motion preference override */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Responsive Web Design -------------------------------------------------- */
