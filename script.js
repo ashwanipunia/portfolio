@@ -159,173 +159,245 @@ window.addEventListener('load', highlightNav);
 })();
 
 /* ==========================================================================
-   Google Anti-Gravity & Interactive Drag/Toss Physics Engine
+   Google Anti-Gravity Physics Engine (https://antigravity.google/)
    ========================================================================== */
 (function() {
-    const heroFloatingCards = document.querySelectorAll('.floating-card');
-    const pubCards = document.querySelectorAll('.publication-item');
     const physicsToggleBtn = document.getElementById('physics-toggle-btn');
-
-    let isPhysicsActive = false;
-    let physicsElements = [];
+    let isAntiGravityActive = false;
+    let bodies = [];
     let animationFrameId = null;
+    let draggedBody = null;
+    let dragOffsetX = 0;
+    let dragOffsetY = 0;
+    let lastMouseX = 0, lastMouseY = 0;
+    let mouseVx = 0, mouseVy = 0;
+    let lastMouseTime = 0;
+    let hasDragged = false;
 
-    // Helper to make an element draggable with throw inertia
-    function enableDragAndToss(el, isZeroGMode = false) {
-        let isDragging = false;
-        let startX = 0, startY = 0;
-        let currentX = 0, currentY = 0;
-        let vx = 0, vy = 0;
-        let lastMouseX = 0, lastMouseY = 0;
-        let lastTime = 0;
+    const gravity = 0.5; // Downward acceleration
+    const bounce = 0.65; // Elasticity coefficient
+    const friction = 0.98; // Air resistance
 
-        el.addEventListener('mousedown', (e) => {
-            // Don't drag if clicking directly on interactive links
-            if (e.target.tagName === 'A' || e.target.closest('a')) return;
+    function initAntiGravity() {
+        const heroSection = document.getElementById('hero');
+        if (!heroSection) return;
 
-            isDragging = true;
-            el.style.animation = 'none'; // pause CSS floating keyframes during drag
-            startX = e.clientX - currentX;
-            startY = e.clientY - currentY;
-            lastMouseX = e.clientX;
-            lastMouseY = e.clientY;
-            lastTime = performance.now();
-            el.style.zIndex = '999';
-            el.style.cursor = 'grabbing';
-            e.preventDefault();
-        });
+        // Elements to break into falling physics bodies
+        const targets = heroSection.querySelectorAll('.hero-badge, h1, h2, .hero-lead, .cta-buttons .btn');
+        bodies = [];
 
-        window.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            const now = performance.now();
-            const dt = Math.max(now - lastTime, 1);
+        const floorY = heroSection.clientHeight - 60;
 
-            currentX = e.clientX - startX;
-            currentY = e.clientY - startY;
-
-            vx = (e.clientX - lastMouseX) / dt * 16;
-            vy = (e.clientY - lastMouseY) / dt * 16;
-
-            lastMouseX = e.clientX;
-            lastMouseY = e.clientY;
-            lastTime = now;
-
-            el.style.transform = `translate3d(${currentX}px, ${currentY}px, 0px) rotate(${vx * 0.5}deg)`;
-        });
-
-        window.addEventListener('mouseup', () => {
-            if (!isDragging) return;
-            isDragging = false;
-            el.style.cursor = 'grab';
-
-            // Throw inertia loop
-            if (Math.abs(vx) > 0.5 || Math.abs(vy) > 0.5) {
-                let inertiaX = currentX;
-                let inertiaY = currentY;
-                let rot = vx * 0.5;
-
-                function stepInertia() {
-                    if (isDragging) return;
-                    vx *= 0.92; // friction
-                    vy *= 0.92;
-                    rot *= 0.92;
-
-                    inertiaX += vx;
-                    inertiaY += vy;
-                    currentX = inertiaX;
-                    currentY = inertiaY;
-
-                    el.style.transform = `translate3d(${inertiaX}px, ${inertiaY}px, 0px) rotate(${rot}deg)`;
-
-                    if (Math.abs(vx) > 0.1 || Math.abs(vy) > 0.1) {
-                        requestAnimationFrame(stepInertia);
-                    }
-                }
-                requestAnimationFrame(stepInertia);
-            }
-        });
-    }
-
-    // Attach basic drag and throw to hero floating cards
-    heroFloatingCards.forEach(card => enableDragAndToss(card));
-
-    // Zero-G Physics Mode Toggle Functionality
-    if (physicsToggleBtn) {
-        physicsToggleBtn.addEventListener('click', () => {
-            isPhysicsActive = !isPhysicsActive;
-
-            const btnText = physicsToggleBtn.querySelector('.physics-btn-text');
-            if (isPhysicsActive) {
-                physicsToggleBtn.classList.add('active');
-                if (btnText) btnText.textContent = 'Restore Gravity';
-                activateZeroG();
-            } else {
-                physicsToggleBtn.classList.remove('active');
-                if (btnText) btnText.textContent = 'Zero-G Mode';
-                deactivateZeroG();
-            }
-        });
-    }
-
-    function activateZeroG() {
-        const targetSection = document.getElementById('hero');
-        if (!targetSection) return;
-
-        // Gather physics targets
-        const itemsToAnimate = targetSection.querySelectorAll('.hero-badge, h1, h2, .hero-lead, .floating-card');
-        physicsElements = [];
-
-        itemsToAnimate.forEach((el) => {
+        targets.forEach((el) => {
             const rect = el.getBoundingClientRect();
-            const pObj = {
+            const parentRect = heroSection.getBoundingClientRect();
+
+            // Store initial CSS state
+            const initialTransform = el.style.transform;
+            const initialPosition = el.style.position;
+
+            const body = {
                 el: el,
-                x: 0,
-                y: 0,
-                vx: (Math.random() - 0.5) * 8,
-                vy: (Math.random() - 0.5) * 8 - 4, // initial upward lift
+                x: rect.left - parentRect.left,
+                y: rect.top - parentRect.top,
+                w: rect.width,
+                h: rect.height,
+                vx: (Math.random() - 0.5) * 6,
+                vy: (Math.random() - 0.5) * 4,
                 rot: 0,
-                vRot: (Math.random() - 0.5) * 3,
-                origTransform: el.style.transform || ''
+                vRot: (Math.random() - 0.5) * 4,
+                isPinned: false,
+                origTransform: initialTransform,
+                origPosition: initialPosition,
+                origLeft: el.style.left,
+                origTop: el.style.top
             };
+
+            // Set inline absolute coordinates relative to container
+            el.style.position = 'absolute';
+            el.style.left = body.x + 'px';
+            el.style.top = body.y + 'px';
+            el.style.margin = '0';
             el.style.animation = 'none';
             el.style.transition = 'none';
-            physicsElements.push(pObj);
+            el.style.zIndex = '50';
+            el.style.cursor = 'grab';
+
+            bodies.push(body);
+
+            // Add Mouse Drag & Throw listeners per body
+            el.addEventListener('mousedown', (e) => onMouseDown(e, body));
+            el.addEventListener('touchstart', (e) => onTouchStart(e, body), { passive: false });
         });
 
-        function physicsLoop() {
-            if (!isPhysicsActive) return;
+        // Global mouse move and up
+        window.addEventListener('mousemove', onMouseMove);
+        window.addEventListener('mouseup', onMouseUp);
+        window.addEventListener('touchmove', onTouchMove, { passive: false });
+        window.addEventListener('touchend', onTouchEnd);
 
-            const boundsWidth = window.innerWidth;
-            const boundsHeight = window.innerHeight;
+        // Physics step loop
+        function physicsStep() {
+            if (!isAntiGravityActive) return;
 
-            physicsElements.forEach(p => {
-                p.x += p.vx;
-                p.y += p.vy;
-                p.rot += p.vRot;
+            const container = heroSection;
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
 
-                // Wall bounces
-                if (p.x > 250 || p.x < -250) p.vx *= -0.8;
-                if (p.y > 200 || p.y < -200) p.vy *= -0.8;
+            bodies.forEach(b => {
+                if (b === draggedBody) return;
 
-                p.el.style.transform = `translate3d(${p.x}px, ${p.y}px, 0px) rotate(${p.rot}deg)`;
+                // Apply gravity & velocity
+                b.vy += gravity;
+                b.vx *= friction;
+                b.vy *= friction;
+                b.vRot *= 0.97;
+
+                b.x += b.vx;
+                b.y += b.vy;
+                b.rot += b.vRot;
+
+                // Floor collision
+                if (b.y + b.h >= containerHeight - 10) {
+                    b.y = containerHeight - 10 - b.h;
+                    b.vy *= -bounce;
+                    b.vx *= 0.8; // ground friction
+                    b.vRot *= 0.8;
+                }
+
+                // Ceiling collision
+                if (b.y <= 0) {
+                    b.y = 0;
+                    b.vy *= -bounce;
+                }
+
+                // Left wall collision
+                if (b.x <= 0) {
+                    b.x = 0;
+                    b.vx *= -bounce;
+                }
+
+                // Right wall collision
+                if (b.x + b.w >= containerWidth) {
+                    b.x = containerWidth - b.w;
+                    b.vx *= -bounce;
+                }
+
+                b.el.style.transform = `translate3d(${b.x - parseFloat(b.el.style.left)}px, ${b.y - parseFloat(b.el.style.top)}px, 0px) rotate(${b.rot}deg)`;
             });
 
-            animationFrameId = requestAnimationFrame(physicsLoop);
+            animationFrameId = requestAnimationFrame(physicsStep);
         }
 
-        physicsLoop();
+        physicsStep();
     }
 
-    function deactivateZeroG() {
+    function onMouseDown(e, body) {
+        if (e.target.tagName === 'A' && !isAntiGravityActive) return;
+
+        draggedBody = body;
+        hasDragged = false;
+        const rect = body.el.getBoundingClientRect();
+        dragOffsetX = e.clientX - rect.left;
+        dragOffsetY = e.clientY - rect.top;
+
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+        lastMouseTime = performance.now();
+
+        body.el.style.zIndex = '1000';
+        body.el.style.cursor = 'grabbing';
+    }
+
+    function onMouseMove(e) {
+        if (!draggedBody) return;
+        hasDragged = true;
+
+        const now = performance.now();
+        const dt = Math.max(now - lastMouseTime, 1);
+
+        mouseVx = (e.clientX - lastMouseX) / dt * 16;
+        mouseVy = (e.clientY - lastMouseY) / dt * 16;
+
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+        lastMouseTime = now;
+
+        const heroSection = document.getElementById('hero');
+        const parentRect = heroSection.getBoundingClientRect();
+
+        draggedBody.x = e.clientX - parentRect.left - dragOffsetX;
+        draggedBody.y = e.clientY - parentRect.top - dragOffsetY;
+        draggedBody.rot += mouseVx * 0.3;
+
+        draggedBody.el.style.transform = `translate3d(${draggedBody.x - parseFloat(draggedBody.el.style.left)}px, ${draggedBody.y - parseFloat(draggedBody.el.style.top)}px, 0px) rotate(${draggedBody.rot}deg)`;
+    }
+
+    function onMouseUp(e) {
+        if (!draggedBody) return;
+
+        // Apply throw impulse
+        draggedBody.vx = mouseVx * 1.2;
+        draggedBody.vy = mouseVy * 1.2;
+        draggedBody.vRot = mouseVx * 0.5;
+
+        draggedBody.el.style.cursor = 'grab';
+        draggedBody.el.style.zIndex = '50';
+        draggedBody = null;
+    }
+
+    function onTouchStart(e, body) {
+        if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            onMouseDown({ clientX: touch.clientX, clientY: touch.clientY, target: e.target }, body);
+        }
+    }
+
+    function onTouchMove(e) {
+        if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            onMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
+        }
+    }
+
+    function onTouchEnd() {
+        onMouseUp();
+    }
+
+    function stopAntiGravity() {
         if (animationFrameId) cancelAnimationFrame(animationFrameId);
 
-        physicsElements.forEach(p => {
-            p.el.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            p.el.style.transform = p.origTransform || 'none';
+        bodies.forEach(b => {
+            b.el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            b.el.style.transform = b.origTransform || 'none';
+            b.el.style.position = b.origPosition || '';
+            b.el.style.left = b.origLeft || '';
+            b.el.style.top = b.origTop || '';
+            b.el.style.margin = '';
+            b.el.style.cursor = '';
+
             setTimeout(() => {
-                p.el.style.transition = '';
+                b.el.style.transition = '';
             }, 800);
         });
-        physicsElements = [];
+        bodies = [];
+    }
+
+    // Toggle button handler
+    if (physicsToggleBtn) {
+        physicsToggleBtn.addEventListener('click', () => {
+            isAntiGravityActive = !isAntiGravityActive;
+            const btnText = physicsToggleBtn.querySelector('.physics-btn-text');
+
+            if (isAntiGravityActive) {
+                physicsToggleBtn.classList.add('active');
+                if (btnText) btnText.textContent = 'Restore Layout';
+                initAntiGravity();
+            } else {
+                physicsToggleBtn.classList.remove('active');
+                if (btnText) btnText.textContent = 'Anti-Gravity Mode';
+                stopAntiGravity();
+            }
+        });
     }
 })();
