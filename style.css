@@ -757,6 +757,22 @@ section {
     gap: 30px;
 }
 
+/* Google Anti-Gravity Hover Physics Card Styling */
+.antigravity-hover-card {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.antigravity-hover-card:hover {
+    box-shadow: 0 20px 40px rgba(15, 43, 70, 0.12);
+    border-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .antigravity-hover-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
 /* Ferrari Editorial Style Publication Cards */
 .publication-item {
     background: var(--card-bg);
@@ -764,11 +780,8 @@ section {
     padding: 32px;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
-    cursor: grab;
-    user-select: none;
 }
 
 .publication-item::before {
