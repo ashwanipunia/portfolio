@@ -3,479 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Academic Portfolio of Ashwani Punia, PhD - Biochemist, Metabolomics and Proteomics Researcher.">
-    <title>Ashwani Punia, PhD | Academic Portfolio</title>
-    <script>
-      (function() {
-        try {
-          const saved = localStorage.getItem('theme');
-          if (saved) {
-            document.documentElement.setAttribute('data-theme', saved);
-          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        } catch (e) {
-          // ignore
+    <title>Google Antigravity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-      })();
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+            color: #1f1f1f;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        #bgCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+
+        /* Logo Component */
+        .logo-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            user-select: none;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+
+        .logo-text {
+            font-size: 1.45rem;
+            letter-spacing: -0.3px;
+            color: #1f1f1f;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo-brand {
+            font-weight: 500;
+        }
+
+        .logo-sub {
+            font-weight: 400;
+            color: #1f1f1f;
+        }
+
+        /* Headline */
+        .headline {
+            font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+            font-weight: 500;
+            letter-spacing: -1.5px;
+            line-height: 1.12;
+            color: #1f1f1f;
+            max-width: 900px;
+            margin-bottom: 48px;
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 52px;
+            padding: 0 28px;
+            border-radius: 26px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: #111111;
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .btn-primary:hover {
+            background-color: #2a2a2a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .btn-secondary {
+            background-color: #f1f3f4;
+            color: #1f1f1f;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e8eaed;
+            transform: translateY(-2px);
+            border-color: #d0d0d0;
+        }
+
+        .btn-icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 2.2rem;
+                letter-spacing: -0.8px;
+            }
+            .btn {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <h1 class="logo">
-                <a href="https://ashwanipunia.github.io/portfolio/">
-                    <img src="FACE.png" width="70" height="70" style="border-radius: 50%; vertical-align: middle;" alt="Ashwani Punia" class="logo-img">
-                </a>
-                <span class="logo-text">Ashwani Punia, <span class="logo-sub">PhD</span></span>
-            </h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/ashwanipunia/portfolio/blob/main/Ashwani_Punia_CV.pdf" target="Ashwani_Punia_CV.pdf" class="nav-cv-btn"><i class="fas fa-file-pdf"></i> CV</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+    <!-- Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Foreground Content -->
+    <main class="main-container">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Multicolored Chevron Icon -->
+                <path d="M12 4L4 12H9L12 9L15 12H20L12 4Z" fill="#4285F4"/>
+                <path d="M12 4L9 12H15L12 4Z" fill="#FBBC05"/>
+                <path d="M15 12L12 9L9 12H4L12 20L20 12H15Z" fill="#34A853"/>
+                <path d="M12 15L15 12H20L12 20Z" fill="#EA4335"/>
+            </svg>
+            <div class="logo-text">
+                <span class="logo-brand">Google</span>
+                <span class="logo-sub">Antigravity</span>
             </div>
-            <!-- Theme toggle -->
-            <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false" class="theme-toggle">
-                <i class="fas fa-moon"></i>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="headline">
+            Experience liftoff with the next-gen<br>agent platform
+        </h1>
+
+        <!-- CTA Buttons -->
+        <div class="cta-group">
+            <button class="btn btn-primary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>Download for Windows</span>
+            </button>
+
+            <button class="btn btn-secondary">
+                <span>Explore use cases</span>
             </button>
         </div>
-    </nav>
+    </main>
 
-    <!-- Hero Section -->
-    <section id="hero" class="fade-in">
-        <div class="hero-content">
-            <div class="hero-badge">Academic Portfolio</div>
-            <h1>Dr. Ashwani Punia</h1>
-            <h2>Biochemist & Mass Spectrometry Specialist</h2>
-            <p class="hero-lead">Advancing the frontiers of phytochemistry, metabolomics, and proteomics to discover novel biomolecules and understand biological systems.</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
-                <a href="#publications" class="btn secondary-btn"><i class="fas fa-microscope"></i> View Publications</a>
-                <a href="https://github.com/ashwanipunia/portfolio/blob/main/Ashwani_Punia_CV.pdf" target="Ashwani_Punia_CV.pdf" class="btn cv-btn"><i class="fas fa-file-pdf"></i> Download CV</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about" aria-label="Scroll to About"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
+    <!-- Canvas Animation Script -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('bgCanvas');
+            const ctx = canvas.getContext('2d');
 
-    <!-- About Me Section -->
-    <section id="about" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <p class="about-text">
-                        As a dedicated and resourceful biochemist, I possess over five years of rigorous research experience specializing in mass spectrometry-driven metabolomics, proteomics, and lipidomics. My research operates at the intersection of analytical chemistry and systems biology, utilizing advanced high-resolution instruments coupled with robust chemometric and bioinformatics workflows.
-                    </p>
-                    <p class="about-text">
-                        I am highly committed to developing innovative extraction, isolation, and separation techniques for plant and mammalian biomolecules. Through multi-omics integration and structural analysis, my goal is to decode complex regulatory pathways, investigate stress adaptation mechanisms in medicinal plants, and uncover therapeutic bioactive molecules.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+            let width = 0;
+            let height = 0;
+            let dpr = 1;
 
-    <!-- Research Interests Section -->
-    <section id="research" class="bg-light fade-in">
-        <div class="container">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="interest-icon-wrapper">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3>Plant Metabolomics</h3>
-                    <p>Deciphering the complexity of plant specialized metabolism, constructing comprehensive metabolite reference maps, and exploring how light regimes and environmental cues regulate secondary biosynthesis pathways in medicinal flora.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon-wrapper">
-                        <i class="fas fa-crosshairs"></i>
-                    </div>
-                    <h3>Mass Spectrometry Imaging</h3>
-                    <p>Spatially mapping metabolites and proteins directly within tissue sections to understand their localized distribution, biosynthesis sites, and transport mechanics under physiological and developmental shifts.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon-wrapper">
-                        <i class="fas fa-dna"></i>
-                    </div>
-                    <h3>Proteomics in Human/Plant Systems</h3>
-                    <p>Using DIA/DDA pipelines, medicinal proteomics, and intact protein/PTM analysis to discover regulatory networks governing cardiac disease models, developmental transitions, and plant environmental adaptations.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon-wrapper">
-                        <i class="fas fa-capsules"></i>
-                    </div>
-                    <h3>Bioactive Peptide Discovery</h3>
-                    <p>Identifying, isolating, and validating novel plant-derived bioactive peptides for pharmaceutical applications, assessing their therapeutic potential in cardio-protection and metabolic diseases.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            let mouse = { x: -1000, y: -1000, targetX: -1000, targetY: -1000 };
 
-    <!-- Technical Competencies Section -->
-    <section id="skills" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">Technical Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-microscope skill-icon"></i>
-                    <h3>Mass Spectrometry</h3>
-                    <p>DIA/DDA workflows, Medicinal Proteomics, Intact Protein Analysis, and Post-Translational Modification (PTM) profiling.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-vials skill-icon"></i>
-                    <h3>Analytical Chemistry</h3>
-                    <p>Method development using HPLC, UHPLC, LC-MS/MS, FPLC (AKTA<sup>&reg;</sup> pure), and Ultracentrifugation.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-laptop-code skill-icon"></i>
-                    <h3>Computational Biology</h3>
-                    <p>Molecular Docking, Network Biology, MS-DIAL, MetaboAnalyst, and advanced statistical analysis of high-throughput omics data.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-toolbox skill-icon"></i>
-                    <h3>Instrumentation Expertise</h3>
-                    <p>UHPLC-QTOF-MS/MS (Agilent 6560 Ion Mobility), MALDI-TOF/TOF (Bruker), IDEAS ImageStream, QuantStudio 3, CFX Opus 96, and GC-MS.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-disease skill-icon"></i>
-                    <h3>Biochemistry & Assays</h3>
-                    <p>Mammalian Cell Culture, Enzyme Kinetics, Antimicrobial Screening, and Extraction/Isolation of biomolecules.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            // Particle arrays
+            let microDots = [];
+            let accentParticles = [];
 
-    <!-- Research Experience Section -->
-    <section id="experience" class="bg-light fade-in">
-        <div class="container">
-            <h2 class="section-title">Research Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2020 - Dec 2025</div>
-                    <div class="timeline-content">
-                        <h3>PhD Researcher (Biological Sciences)</h3>
-                        <h4>CSIR-Institute of Himalayan Bioresource Technology (CSIR-IHBT), Palampur, HP, India</h4>
-                        <ul>
-                            <li>Developed and validated a rapid, robust method for isolating and quantifying therapeutic alkaloids from endangered <i>Aconitum heterophyllum</i> using UHPLC-DAD-QTOF-IMS.</li>
-                            <li>Constructed a highly detailed metabolic reference map identifying 266 plant specialized compounds.</li>
-                            <li>Conducted advanced molecular docking to identify 80 high-potential bioactive leads for therapeutic application.</li>
-                            <li>Leveraged transcriptomics and metabolomics in tandem to map light-dependent transcriptional regulations in secondary biosynthesis.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            // Color palette gradient for top-right cluster
+            const colors = [
+                '#4285F4', // Cyan / Google Blue
+                '#1A73E8', // Deep Blue
+                '#5C6BC0', // Indigo
+                '#8E24AA', // Purple
+                '#D81B60', // Magenta
+                '#EA4335'  // Red / Coral
+            ];
 
-    <!-- Education Section -->
-    <section id="education" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2020 - 2025</div>
-                    <div class="timeline-content">
-                        <h3>Ph.D. in Biological Sciences</h3>
-                        <p class="institution">Academy of Scientific & Innovative Research (AcSIR)</p>
-                        <p class="location">CSIR-IHBT, Palampur, India</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2018 - 2020</div>
-                    <div class="timeline-content">
-                        <h3>M.Tech in Agricultural Biotechnology</h3>
-                        <p class="institution">Indian Institute of Technology Kharagpur (IIT Kharagpur)</p>
-                        <p class="location">West Bengal, India</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2016 - 2018</div>
-                    <div class="timeline-content">
-                        <h3>M.Sc in Biotechnology</h3>
-                        <p class="institution">Central University of Haryana</p>
-                        <p class="location">Jant-Pali, India</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            function resize() {
+                dpr = window.devicePixelRatio || 1;
+                width = window.innerWidth;
+                height = window.innerHeight;
 
-    <!-- Awards & Honors Section -->
-    <section id="awards" class="bg-light fade-in">
-        <div class="container">
-            <h2 class="section-title">Awards & Honors</h2>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-award"></i></div>
-                    <div class="award-details">
-                        <span class="award-year">May 2025</span>
-                        <h3>International Travel Support</h3>
-                        <p class="award-desc">Awarded by Anusandhan National Research Foundation (ANRF) to support and facilitate research presentation and attendance at the 73rd ASMS Conference, Baltimore, Maryland, USA.</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="award-details">
-                        <span class="award-year">March 2024</span>
-                        <h3>Best Poster Award</h3>
-                        <p class="award-desc">Recognized at the International Symposium on Plant Biology and Functional Genomics, organized by the prestigious University of Hyderabad.</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-medal"></i></div>
-                    <div class="award-details">
-                        <span class="award-year">2017, 2018, 2019</span>
-                        <h3>Joint CSIR-UGC NET</h3>
-                        <p class="award-desc">Qualified the National Eligibility Test (NET) conducted jointly by CSIR and UGC, demonstrating outstanding conceptual strength in Life Sciences.</p>
-                    </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="award-details">
-                        <span class="award-year">2018, 2019, 2020, 2022</span>
-                        <h3>Graduate Aptitude Test in Engineering (GATE)</h3>
-                        <p class="award-desc">Consistently qualified the highly competitive GATE exam in Biotechnology with high percentile, highlighting rigorous academic foundation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                ctx.scale(dpr, dpr);
 
-    <!-- Publications Section -->
-    <section id="publications" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <p class="publications-summary">
-                <span class="stat-badge"><i class="fas fa-book"></i> Total Publications: <span class="stat-count" data-target="8">0</span></span>
-                <span class="stat-badge"><i class="fas fa-quote-right"></i> Citations: <span class="stat-count" data-target="59">0</span></span>
-                <span class="stat-badge"><i class="fas fa-chart-line"></i> h-index: <span class="stat-count" data-target="4">0</span></span>
-            </p>
-            
-            <div class="publications-list">
+                initParticles();
+            }
 
-                <!-- Publication 1 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2026</span>
-                        <span class="pub-badge if-badge">IF 3.8</span>
-                        <span class="pub-badge type-badge">Journal Article</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809" target="_blank">
-                            Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        Shweta Thakur, Savita Kumari, <strong>Ashwani Punia</strong>, Vikram Patial, Damanpreet Singh, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Journal of Proteome Research</span> | <a href="https://doi.org/10.1021/acs.jproteome.5c00809" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1021/acs.jproteome.5c00809</a>
-                    </p>
-                </div>
+            function initParticles() {
+                // 1. Global Micro-Dots (Background texture)
+                microDots = [];
+                const dotCount = Math.floor((width * height) / 3200);
+                for (let i = 0; i < dotCount; i++) {
+                    microDots.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 0.8 + 0.4,
+                        opacity: Math.random() * 0.12 + 0.04
+                    });
+                }
 
-                <!-- Publication 2 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2026</span>
-                        <span class="pub-badge if-badge">IF 8.7</span>
-                        <span class="pub-badge type-badge">Review Article</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://www.tandfonline.com/doi/full/10.1080/07388551.2026.2619534" target="_blank">
-                            Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis in plants
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        <strong>Ashwani Punia</strong>, Satyakam, Vishal Saini, Monika Chouhan, Niranjan Chakraborty, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Critical Reviews in Biotechnology</span> | <a href="https://doi.org/10.1080/07388551.2026.2619534" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1080/07388551.2026.2619534</a>
-                    </p>
-                </div>
+                // 2. Top-Right Accent Particle Field
+                accentParticles = [];
+                const accentCount = Math.floor((width * height) / 2200);
 
-                <!-- Publication 3 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2025</span>
-                        <span class="pub-badge book-badge">Book Chapter</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://link.springer.com/protocol/10.1007/978-1-0716-4981-7_10" target="_blank">
-                            Mass Spectrometry-Based Methods for Plant Metabolite Profiling
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        <strong>Ashwani Punia</strong>, Satyakam, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Plant Stress Memory: Methods and Protocols, Methods in Molecular Biology</span> | <a href="https://doi.org/10.1007/978-1-0716-4981-7_10" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1007/978-1-0716-4981-7_10</a>
-                    </p>
-                </div>
+                for (let i = 0; i < accentCount; i++) {
+                    // Radius distribution centered around top-right quadrant
+                    const u1 = Math.random();
+                    const u2 = Math.random();
 
-                <!-- Publication 4 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2024</span>
-                        <span class="pub-badge book-badge">Book Chapter</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://link.springer.com/chapter/10.1007/978-981-97-3405-4_19" target="_blank">
-                            Unlocking Ethnomedicinal Plant Potentials: Advancing Drug Discovery in the High-Throughput Omics Era
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        <strong>Ashwani Punia</strong>, Satyakam, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Ethnomedicinal Plants for Drug Discovery: Current Developments (pp. 443-462), Springer Nature Singapore</span> | <a href="https://doi.org/10.1007/978-981-97-3405-4_19" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1007/978-981-97-3405-4_19</a>
-                    </p>
-                </div>
+                    // Concentrated toward top-right corner (width, 0)
+                    const baseX = width - Math.pow(u1, 1.4) * (width * 0.65);
+                    const baseY = Math.pow(u2, 1.5) * (height * 0.85);
 
-                <!-- Publication 5 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2024</span>
-                        <span class="pub-badge if-badge">IF 6.4</span>
-                        <span class="pub-badge type-badge">Journal Article</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926669024018326" target="_blank">
-                            Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        Shweta Thakur, <strong>Ashwani Punia</strong>, Satyakam, Vishal Acharya, Brijesh Kumar, Amit Prasad, Sudesh Kumar Yadav, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Industrial Crops and Products</span> | <a href="https://doi.org/10.1016/j.indcrop.2024.119855" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.indcrop.2024.119855</a>
-                    </p>
-                </div>
+                    // Map position to color spectrum (Cyan top-left of cluster to Coral bottom-right)
+                    const colorProgress = Math.min(Math.max(((baseX / width) * 0.4 + (baseY / height) * 0.6), 0), 0.99);
+                    const colorIndex = Math.floor(colorProgress * (colors.length - 1));
+                    const color = colors[colorIndex] || colors[0];
 
-                <!-- Publication 6 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2024</span>
-                        <span class="pub-badge if-badge">IF 3.1</span>
-                        <span class="pub-badge type-badge">Journal Article</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1874391924001088" target="_blank">
-                            Proteomic and metabolomic insights into seed germination of <i>Ferula assa-foetida</i>
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        <strong>Ashwani Punia</strong>, Manglesh Kumari, Monika Chouhan, Vishal Saini, Robin Joshi, Ashok Kumar, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Journal of Proteomics</span> | <a href="https://doi.org/10.1016/j.jprot.2024.105176" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.jprot.2024.105176</a>
-                    </p>
-                </div>
+                    const type = Math.random() < 0.65 ? 'dash' : (Math.random() < 0.5 ? 'pill' : 'dot');
 
-                <!-- Publication 7 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2022</span>
-                        <span class="pub-badge if-badge">IF 2.9</span>
-                        <span class="pub-badge type-badge">Journal Article</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3164" target="_blank">
-                            Identification and quantification of eight alkaloids in <i>Aconitum heterophyllum</i> using UHPLC‐DAD‐QTOF‐IMS: A valuable tool for quality control
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        <strong>Ashwani Punia</strong>, Robin Joshi, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">Phytochemical Analysis</span> | <a href="https://doi.org/10.1002/pca.3164" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1002/pca.3164</a>
-                    </p>
-                </div>
+                    accentParticles.push({
+                        baseX: baseX,
+                        baseY: baseY,
+                        x: baseX,
+                        y: baseY,
+                        vx: 0,
+                        vy: 0,
+                        length: Math.random() * 10 + 5,
+                        width: Math.random() * 1.5 + 1.2,
+                        angle: -Math.PI / 3 + (Math.random() - 0.5) * 0.3, // ~ -60 deg slant
+                        phase: Math.random() * Math.PI * 2,
+                        speed: Math.random() * 0.015 + 0.005,
+                        ampX: Math.random() * 12 + 4,
+                        ampY: Math.random() * 12 + 4,
+                        color: color,
+                        opacity: Math.random() * 0.75 + 0.25,
+                        type: type
+                    });
+                }
+            }
 
-                <!-- Publication 8 -->
-                <div class="publication-item">
-                    <div class="pub-badges">
-                        <span class="pub-badge year-badge">2021</span>
-                        <span class="pub-badge if-badge">IF 5.6</span>
-                        <span class="pub-badge type-badge">Journal Article</span>
-                    </div>
-                    <h3 class="pub-title">
-                        <a href="https://link.springer.com/article/10.1186/s12870-021-03394-8" target="_blank">
-                            In-depth assembly of organ and development dissected <i>Picrorhiza kurroa</i> proteome map using mass spectrometry
-                        </a>
-                    </h3>
-                    <p class="pub-authors">
-                        Manglesh Kumari, Upendra Kumar Pradhan, Robin Joshi, <strong>Ashwani Punia</strong>, Ravi Shankar, Rajiv Kumar
-                    </p>
-                    <p class="pub-meta">
-                        <span class="pub-journal">BMC Plant Biology</span> | <a href="https://doi.org/10.1186/s12870-021-03394-8" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1186/s12870-021-03394-8</a>
-                    </p>
-                </div>
+            function animate(time) {
+                ctx.clearRect(0, 0, width, height);
 
-            </div>
-        </div>
-    </section>
+                // Smooth mouse interpolation
+                mouse.x += (mouse.targetX - mouse.x) * 0.1;
+                mouse.y += (mouse.targetY - mouse.y) * 0.1;
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light fade-in">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-lead">Please feel free to connect for scientific collaborations, research opportunities, or academic discussions.</p>
+                // Render Background Micro-Dots
+                ctx.fillStyle = '#111111';
+                for (let i = 0; i < microDots.length; i++) {
+                    const d = microDots[i];
+                    ctx.globalAlpha = d.opacity;
+                    ctx.beginPath();
+                    ctx.arc(d.x, d.y, d.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                }
 
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <h3>Email Addresses</h3>
-                    <p><a href="mailto:ashwanipunia@yahoo.com">ashwanipunia@yahoo.com</a></p>
-                    <p><a href="mailto:ashwani.ihbt20a@acsir.res.in">ashwani.ihbt20a@acsir.res.in</a></p>
-                </div>
+                // Render Top-Right Accent Field
+                const t = time * 0.001;
 
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+917206551518">+91-7206551518</a></p>
-                    <span class="contact-sub">India</span>
-                </div>
+                for (let i = 0; i < accentParticles.length; i++) {
+                    const p = accentParticles[i];
 
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Location</h3>
-                    <p>CSIR-Institute of Himalayan Bioresource Technology (CSIR-IHBT), Palampur, H.P., India</p>
-                </div>
-            </div>
+                    // Ambient zero-g turbulence drift
+                    const floatX = p.baseX + Math.sin(t * p.speed * 60 + p.phase) * p.ampX;
+                    const floatY = p.baseY + Math.cos(t * p.speed * 50 + p.phase) * p.ampY;
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ashwani-punia-a8b10917b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=cunYBgoAAAAJ" target="_blank" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
-                <a href="https://www.researchgate.net/profile/Ashwani-Punia-2?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                <a href="https://orcid.org/0009-0001-9700-7668" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
-            </div>
-        </div>
-    </section>
+                    // Mouse Repulsion Physics
+                    const dx = floatX - mouse.x;
+                    const dy = floatY - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const maxDist = 130;
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Dr. Ashwani Punia. All Rights Reserved.</p>
-            <p class="footer-design">Designed for Academic Excellence</p>
-        </div>
-    </footer>
+                    let pushX = 0;
+                    let pushY = 0;
 
-    <script src="script.js"></script>
+                    if (dist < maxDist) {
+                        const force = (1 - dist / maxDist) * 35;
+                        const angle = Math.atan2(dy, dx);
+                        pushX = Math.cos(angle) * force;
+                        pushY = Math.sin(angle) * force;
+                    }
+
+                    // Target position with spring physics
+                    const targetX = floatX + pushX;
+                    const targetY = floatY + pushY;
+
+                    p.vx += (targetX - p.x) * 0.08;
+                    p.vy += (targetY - p.y) * 0.08;
+                    p.vx *= 0.82;
+                    p.vy *= 0.82;
+
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    // Draw Particle
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.angle + Math.sin(t + p.phase) * 0.08);
+                    ctx.fillStyle = p.color;
+                    ctx.strokeStyle = p.color;
+                    ctx.globalAlpha = p.opacity;
+
+                    if (p.type === 'dash') {
+                        ctx.lineWidth = p.width;
+                        ctx.lineCap = 'round';
+                        ctx.beginPath();
+                        ctx.moveTo(-p.length / 2, 0);
+                        ctx.lineTo(p.length / 2, 0);
+                        ctx.stroke();
+                    } else if (p.type === 'pill') {
+                        ctx.beginPath();
+                        ctx.roundRect(-p.length / 2, -p.width / 2, p.length, p.width * 1.8, 3);
+                        ctx.fill();
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(0, 0, p.width * 1.2, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+
+                    ctx.restore();
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            // Mouse position listener
+            window.addEventListener('mousemove', (e) => {
+                mouse.targetX = e.clientX;
+                mouse.targetY = e.clientY;
+            });
+
+            window.addEventListener('mouseleave', () => {
+                mouse.targetX = -1000;
+                mouse.targetY = -1000;
+            });
+
+            window.addEventListener('resize', resize);
+
+            // Initialize
+            resize();
+            requestAnimationFrame(animate);
+        })();
+    </script>
 </body>
 </html>
