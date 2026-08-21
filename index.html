@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Academic Portfolio of Ashwani Punia, PhD - Biochemist, Metabolomics and Proteomics Researcher.">
+    <title>Ashwani Punia, PhD | Academic Portfolio</title>
+    <script>
+      (function() {
+        try {
+          const saved = localStorage.getItem('theme');
+          if (saved) {
+            document.documentElement.setAttribute('data-theme', saved);
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">
+                <a href="https://ashwanipunia.github.io/portfolio/">
+                    <img src="FACE.png" width="70" height="70" style="border-radius: 50%; vertical-align: middle;" alt="Ashwani Punia" class="logo-img">
+                </a>
+                <span class="logo-text">Ashwani Punia, <span class="logo-sub">PhD</span></span>
+            </h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://github.com/ashwanipunia/portfolio/blob/main/Ashwani_Punia_CV.pdf" target="Ashwani_Punia_CV.pdf" class="nav-cv-btn"><i class="fas fa-file-pdf"></i> CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- Theme toggle -->
+            <button id="theme-toggle" aria-label="Toggle theme" aria-pressed="false" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="fade-in">
+        <div class="hero-content">
+            <div class="hero-badge">Academic Portfolio</div>
+            <h1>Dr. Ashwani Punia</h1>
+            <h2>Biochemist & Mass Spectrometry Specialist</h2>
+            <p class="hero-lead">Advancing the frontiers of phytochemistry, metabolomics, and proteomics to discover novel biomolecules and understand biological systems.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+                <a href="#publications" class="btn secondary-btn"><i class="fas fa-microscope"></i> View Publications</a>
+                <a href="https://github.com/ashwanipunia/portfolio/blob/main/Ashwani_Punia_CV.pdf" target="Ashwani_Punia_CV.pdf" class="btn cv-btn"><i class="fas fa-file-pdf"></i> Download CV</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll to About"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <p class="about-text">
+                        As a dedicated and resourceful biochemist, I possess over five years of rigorous research experience specializing in mass spectrometry-driven metabolomics, proteomics, and lipidomics. My research operates at the intersection of analytical chemistry and systems biology, utilizing advanced high-resolution instruments coupled with robust chemometric and bioinformatics workflows.
+                    </p>
+                    <p class="about-text">
+                        I am highly committed to developing innovative extraction, isolation, and separation techniques for plant and mammalian biomolecules. Through multi-omics integration and structural analysis, my goal is to decode complex regulatory pathways, investigate stress adaptation mechanisms in medicinal plants, and uncover therapeutic bioactive molecules.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon-wrapper">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Plant Metabolomics</h3>
+                    <p>Deciphering the complexity of plant specialized metabolism, constructing comprehensive metabolite reference maps, and exploring how light regimes and environmental cues regulate secondary biosynthesis pathways in medicinal flora.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon-wrapper">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3>Mass Spectrometry Imaging</h3>
+                    <p>Spatially mapping metabolites and proteins directly within tissue sections to understand their localized distribution, biosynthesis sites, and transport mechanics under physiological and developmental shifts.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon-wrapper">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Proteomics in Human/Plant Systems</h3>
+                    <p>Using DIA/DDA pipelines, medicinal proteomics, and intact protein/PTM analysis to discover regulatory networks governing cardiac disease models, developmental transitions, and plant environmental adaptations.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon-wrapper">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <h3>Bioactive Peptide Discovery</h3>
+                    <p>Identifying, isolating, and validating novel plant-derived bioactive peptides for pharmaceutical applications, assessing their therapeutic potential in cardio-protection and metabolic diseases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Competencies Section -->
+    <section id="skills" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Technical Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-microscope skill-icon"></i>
+                    <h3>Mass Spectrometry</h3>
+                    <p>DIA/DDA workflows, Medicinal Proteomics, Intact Protein Analysis, and Post-Translational Modification (PTM) profiling.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-vials skill-icon"></i>
+                    <h3>Analytical Chemistry</h3>
+                    <p>Method development using HPLC, UHPLC, LC-MS/MS, FPLC (AKTA<sup>&reg;</sup> pure), and Ultracentrifugation.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code skill-icon"></i>
+                    <h3>Computational Biology</h3>
+                    <p>Molecular Docking, Network Biology, MS-DIAL, MetaboAnalyst, and advanced statistical analysis of high-throughput omics data.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-toolbox skill-icon"></i>
+                    <h3>Instrumentation Expertise</h3>
+                    <p>UHPLC-QTOF-MS/MS (Agilent 6560 Ion Mobility), MALDI-TOF/TOF (Bruker), IDEAS ImageStream, QuantStudio 3, CFX Opus 96, and GC-MS.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-disease skill-icon"></i>
+                    <h3>Biochemistry & Assays</h3>
+                    <p>Mammalian Cell Culture, Enzyme Kinetics, Antimicrobial Screening, and Extraction/Isolation of biomolecules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Experience Section -->
+    <section id="experience" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Research Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2020 - Dec 2025</div>
+                    <div class="timeline-content">
+                        <h3>PhD Researcher (Biological Sciences)</h3>
+                        <h4>CSIR-Institute of Himalayan Bioresource Technology (CSIR-IHBT), Palampur, HP, India</h4>
+                        <ul>
+                            <li>Developed and validated a rapid, robust method for isolating and quantifying therapeutic alkaloids from endangered <i>Aconitum heterophyllum</i> using UHPLC-DAD-QTOF-IMS.</li>
+                            <li>Constructed a highly detailed metabolic reference map identifying 266 plant specialized compounds.</li>
+                            <li>Conducted advanced molecular docking to identify 80 high-potential bioactive leads for therapeutic application.</li>
+                            <li>Leveraged transcriptomics and metabolomics in tandem to map light-dependent transcriptional regulations in secondary biosynthesis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Ph.D. in Biological Sciences</h3>
+                        <p class="institution">Academy of Scientific & Innovative Research (AcSIR)</p>
+                        <p class="location">CSIR-IHBT, Palampur, India</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>M.Tech in Agricultural Biotechnology</h3>
+                        <p class="institution">Indian Institute of Technology Kharagpur (IIT Kharagpur)</p>
+                        <p class="location">West Bengal, India</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <h3>M.Sc in Biotechnology</h3>
+                        <p class="institution">Central University of Haryana</p>
+                        <p class="location">Jant-Pali, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Honors Section -->
+    <section id="awards" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Awards & Honors</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-award"></i></div>
+                    <div class="award-details">
+                        <span class="award-year">May 2025</span>
+                        <h3>International Travel Support</h3>
+                        <p class="award-desc">Awarded by Anusandhan National Research Foundation (ANRF) to support and facilitate research presentation and attendance at the 73rd ASMS Conference, Baltimore, Maryland, USA.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="award-details">
+                        <span class="award-year">March 2024</span>
+                        <h3>Best Poster Award</h3>
+                        <p class="award-desc">Recognized at the International Symposium on Plant Biology and Functional Genomics, organized by the prestigious University of Hyderabad.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-medal"></i></div>
+                    <div class="award-details">
+                        <span class="award-year">2017, 2018, 2019</span>
+                        <h3>Joint CSIR-UGC NET</h3>
+                        <p class="award-desc">Qualified the National Eligibility Test (NET) conducted jointly by CSIR and UGC, demonstrating outstanding conceptual strength in Life Sciences.</p>
+                    </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="award-details">
+                        <span class="award-year">2018, 2019, 2020, 2022</span>
+                        <h3>Graduate Aptitude Test in Engineering (GATE)</h3>
+                        <p class="award-desc">Consistently qualified the highly competitive GATE exam in Biotechnology with high percentile, highlighting rigorous academic foundation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <p class="publications-summary">
+                <span class="stat-badge"><i class="fas fa-book"></i> Total Publications: <span class="stat-count" data-target="8">0</span></span>
+                <span class="stat-badge"><i class="fas fa-quote-right"></i> Citations: <span class="stat-count" data-target="59">0</span></span>
+                <span class="stat-badge"><i class="fas fa-chart-line"></i> h-index: <span class="stat-count" data-target="4">0</span></span>
+            </p>
+            
+            <div class="publications-list">
+
+                <!-- Publication 1 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2026</span>
+                        <span class="pub-badge if-badge">IF 3.8</span>
+                        <span class="pub-badge type-badge">Journal Article</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809" target="_blank">
+                            Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        Shweta Thakur, Savita Kumari, <strong>Ashwani Punia</strong>, Vikram Patial, Damanpreet Singh, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Journal of Proteome Research</span> | <a href="https://doi.org/10.1021/acs.jproteome.5c00809" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1021/acs.jproteome.5c00809</a>
+                    </p>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2026</span>
+                        <span class="pub-badge if-badge">IF 8.7</span>
+                        <span class="pub-badge type-badge">Review Article</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://www.tandfonline.com/doi/full/10.1080/07388551.2026.2619534" target="_blank">
+                            Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis in plants
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        <strong>Ashwani Punia</strong>, Satyakam, Vishal Saini, Monika Chouhan, Niranjan Chakraborty, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Critical Reviews in Biotechnology</span> | <a href="https://doi.org/10.1080/07388551.2026.2619534" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1080/07388551.2026.2619534</a>
+                    </p>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2025</span>
+                        <span class="pub-badge book-badge">Book Chapter</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://link.springer.com/protocol/10.1007/978-1-0716-4981-7_10" target="_blank">
+                            Mass Spectrometry-Based Methods for Plant Metabolite Profiling
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        <strong>Ashwani Punia</strong>, Satyakam, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Plant Stress Memory: Methods and Protocols, Methods in Molecular Biology</span> | <a href="https://doi.org/10.1007/978-1-0716-4981-7_10" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1007/978-1-0716-4981-7_10</a>
+                    </p>
+                </div>
+
+                <!-- Publication 4 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2024</span>
+                        <span class="pub-badge book-badge">Book Chapter</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-97-3405-4_19" target="_blank">
+                            Unlocking Ethnomedicinal Plant Potentials: Advancing Drug Discovery in the High-Throughput Omics Era
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        <strong>Ashwani Punia</strong>, Satyakam, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Ethnomedicinal Plants for Drug Discovery: Current Developments (pp. 443-462), Springer Nature Singapore</span> | <a href="https://doi.org/10.1007/978-981-97-3405-4_19" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1007/978-981-97-3405-4_19</a>
+                    </p>
+                </div>
+
+                <!-- Publication 5 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2024</span>
+                        <span class="pub-badge if-badge">IF 6.4</span>
+                        <span class="pub-badge type-badge">Journal Article</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926669024018326" target="_blank">
+                            Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        Shweta Thakur, <strong>Ashwani Punia</strong>, Satyakam, Vishal Acharya, Brijesh Kumar, Amit Prasad, Sudesh Kumar Yadav, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Industrial Crops and Products</span> | <a href="https://doi.org/10.1016/j.indcrop.2024.119855" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.indcrop.2024.119855</a>
+                    </p>
+                </div>
+
+                <!-- Publication 6 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2024</span>
+                        <span class="pub-badge if-badge">IF 3.1</span>
+                        <span class="pub-badge type-badge">Journal Article</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1874391924001088" target="_blank">
+                            Proteomic and metabolomic insights into seed germination of <i>Ferula assa-foetida</i>
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        <strong>Ashwani Punia</strong>, Manglesh Kumari, Monika Chouhan, Vishal Saini, Robin Joshi, Ashok Kumar, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Journal of Proteomics</span> | <a href="https://doi.org/10.1016/j.jprot.2024.105176" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.jprot.2024.105176</a>
+                    </p>
+                </div>
+
+                <!-- Publication 7 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2022</span>
+                        <span class="pub-badge if-badge">IF 2.9</span>
+                        <span class="pub-badge type-badge">Journal Article</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3164" target="_blank">
+                            Identification and quantification of eight alkaloids in <i>Aconitum heterophyllum</i> using UHPLC‐DAD‐QTOF‐IMS: A valuable tool for quality control
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        <strong>Ashwani Punia</strong>, Robin Joshi, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">Phytochemical Analysis</span> | <a href="https://doi.org/10.1002/pca.3164" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1002/pca.3164</a>
+                    </p>
+                </div>
+
+                <!-- Publication 8 -->
+                <div class="publication-item">
+                    <div class="pub-badges">
+                        <span class="pub-badge year-badge">2021</span>
+                        <span class="pub-badge if-badge">IF 5.6</span>
+                        <span class="pub-badge type-badge">Journal Article</span>
+                    </div>
+                    <h3 class="pub-title">
+                        <a href="https://link.springer.com/article/10.1186/s12870-021-03394-8" target="_blank">
+                            In-depth assembly of organ and development dissected <i>Picrorhiza kurroa</i> proteome map using mass spectrometry
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        Manglesh Kumari, Upendra Kumar Pradhan, Robin Joshi, <strong>Ashwani Punia</strong>, Ravi Shankar, Rajiv Kumar
+                    </p>
+                    <p class="pub-meta">
+                        <span class="pub-journal">BMC Plant Biology</span> | <a href="https://doi.org/10.1186/s12870-021-03394-8" target="_blank" class="pub-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1186/s12870-021-03394-8</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light fade-in">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-lead">Please feel free to connect for scientific collaborations, research opportunities, or academic discussions.</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email Addresses</h3>
+                    <p><a href="mailto:ashwanipunia@yahoo.com">ashwanipunia@yahoo.com</a></p>
+                    <p><a href="mailto:ashwani.ihbt20a@acsir.res.in">ashwani.ihbt20a@acsir.res.in</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+917206551518">+91-7206551518</a></p>
+                    <span class="contact-sub">India</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Location</h3>
+                    <p>CSIR-Institute of Himalayan Bioresource Technology (CSIR-IHBT), Palampur, H.P., India</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ashwani-punia-a8b10917b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=cunYBgoAAAAJ" target="_blank" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+                <a href="https://www.researchgate.net/profile/Ashwani-Punia-2?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                <a href="https://orcid.org/0009-0001-9700-7668" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Dr. Ashwani Punia. All Rights Reserved.</p>
+            <p class="footer-design">Designed for Academic Excellence</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
