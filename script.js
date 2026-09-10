@@ -211,39 +211,4 @@ window.addEventListener('load', highlightNav);
     requestAnimationFrame(animateBlobs);
 })();
 
-/* ==========================================================================
-   Google Anti-Gravity Hover Physics (3D Magnetic Tilt & Floating Levitation)
-   ========================================================================== */
-(function() {
-    const hoverTargets = document.querySelectorAll(
-        '.publication-item, .interest-card, .skill-card, .award-card, .about-card, .contact-card, .btn'
-    );
-
-    hoverTargets.forEach(card => {
-        card.classList.add('antigravity-hover-card');
-
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const cardWidth = rect.width;
-            const cardHeight = rect.height;
-
-            // Calculate cursor position relative to card center (-1 to 1)
-            const centerX = rect.left + cardWidth / 2;
-            const centerY = rect.top + cardHeight / 2;
-            const mouseX = (e.clientX - centerX) / (cardWidth / 2);
-            const mouseY = (e.clientY - centerY) / (cardHeight / 2);
-
-            // Anti-gravity tilt angles and levitation lift
-            const tiltX = -mouseY * 12; // rotate around X axis
-            const tiltY = mouseX * 12;  // rotate around Y axis
-            const liftZ = 16;           // translateZ levitation in pixels
-
-            card.style.transform = `perspective(1000px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) translateZ(${liftZ}px) scale3d(1.02, 1.02, 1.02)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale3d(1, 1, 1)';
-        });
-    });
-})();
 
