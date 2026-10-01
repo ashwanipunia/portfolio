@@ -163,10 +163,10 @@ window.addEventListener('load', highlightNav);
    ========================================================================== */
 (function() {
     const blobs = [
-        { element: document.querySelector('.blob-blue'), speedX: 0.0007, speedY: 0.0009, ampX: 120, ampY: 100, phase: 0 },
-        { element: document.querySelector('.blob-red'), speedX: 0.0008, speedY: 0.0006, ampX: 100, ampY: 120, phase: 1.5 },
-        { element: document.querySelector('.blob-yellow'), speedX: 0.0006, speedY: 0.0010, ampX: 140, ampY: 90, phase: 3.0 },
-        { element: document.querySelector('.blob-green'), speedX: 0.0009, speedY: 0.0007, ampX: 110, ampY: 130, phase: 4.5 }
+        { element: document.querySelector('.blob-blue'), speedX: 0.007, speedY: 0.009, ampX: 120, ampY: 100, phase: 0 },
+        { element: document.querySelector('.blob-red'), speedX: 0.008, speedY: 0.006, ampX: 100, ampY: 120, phase: 1.5 },
+        { element: document.querySelector('.blob-yellow'), speedX: 0.006, speedY: 0.010, ampX: 140, ampY: 90, phase: 3.0 },
+        { element: document.querySelector('.blob-green'), speedX: 0.009, speedY: 0.007, ampX: 110, ampY: 130, phase: 4.5 }
     ];
 
     if (!blobs[0].element) return;
@@ -215,9 +215,7 @@ window.addEventListener('load', highlightNav);
    Google Anti-Gravity Hover Physics (3D Magnetic Tilt & Floating Levitation)
    ========================================================================== */
 (function() {
-    const hoverTargets = document.querySelectorAll(
-        '.publication-item, .interest-card, .skill-card, .award-card, .about-card, .contact-card, .btn'
-    );
+    const hoverTargets = document.querySelectorAll('.btn');
 
     hoverTargets.forEach(card => {
         card.classList.add('antigravity-hover-card');
