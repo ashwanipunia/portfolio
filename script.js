@@ -245,3 +245,190 @@ window.addEventListener('load', highlightNav);
     });
 })();
 
+/* ==========================================================================
+   About Me Section - Interactive Particle Constellation Background (METLIN style)
+   ========================================================================== */
+(function() {
+    const section = document.getElementById('about');
+    const canvas = document.getElementById('about-particle-canvas');
+    if (!section || !canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let animationFrameId = null;
+    let isSectionVisible = false;
+    let particlesArray = [];
+
+    const mouse = {
+        x: null,
+        y: null,
+        radius: 120
+    };
+
+    function resizeCanvas() {
+        const rect = section.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+        mouse.radius = Math.min(canvas.width, canvas.height) / 5;
+        createParticles();
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+
+    window.addEventListener('mousemove', (e) => {
+        const rect = section.getBoundingClientRect();
+        if (e.clientX >= rect.left && e.clientX <= rect.right &&
+            e.clientY >= rect.top && e.clientY <= rect.bottom) {
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        } else {
+            mouse.x = null;
+            mouse.y = null;
+        }
+    });
+
+    window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    function getThemeColors() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+            (!document.documentElement.getAttribute('data-theme') && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        if (isDark) {
+            return {
+                particleColor: 'rgba(223, 177, 66, 0.85)', // Amber/Gold
+                lineColorRgb: '75, 211, 190'                // Teal / Cyan
+            };
+        } else {
+            return {
+                particleColor: 'rgba(15, 43, 70, 0.75)',   // Academic Navy
+                lineColorRgb: '158, 122, 40'               // Muted Gold
+            };
+        }
+    }
+
+    class Particle {
+        constructor(x, y, velX, velY, size) {
+            this.x = x;
+            this.y = y;
+            this.velX = velX;
+            this.velY = velY;
+            this.size = size;
+        }
+
+        draw(particleColor) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            ctx.fillStyle = particleColor;
+            ctx.fill();
+        }
+
+        update(colors) {
+            if (this.x > canvas.width || this.x < 0) {
+                this.velX = -this.velX;
+            }
+            if (this.y > canvas.height || this.y < 0) {
+                this.velY = -this.velY;
+            }
+
+            if (mouse.x !== null && mouse.y !== null) {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < mouse.radius + this.size) {
+                    const buffer = this.size * 5;
+                    if (mouse.x < this.x && this.x < canvas.width - buffer) {
+                        this.x += 3;
+                    }
+                    if (mouse.x > this.x && this.x > buffer) {
+                        this.x -= 3;
+                    }
+                    if (mouse.y < this.y && this.y < canvas.height - buffer) {
+                        this.y += 3;
+                    }
+                    if (mouse.y > this.y && this.y > buffer) {
+                        this.y -= 3;
+                    }
+                }
+            }
+
+            this.x += this.velX;
+            this.y += this.velY;
+            this.draw(colors.particleColor);
+        }
+    }
+
+    function createParticles() {
+        particlesArray = [];
+        const noOfParticles = Math.floor((canvas.width * canvas.height) / 7000);
+
+        for (let i = 0; i < noOfParticles; i++) {
+            let size = (Math.random() * 3) + 1.5;
+            let x = Math.random() * (canvas.width - size * 4) + size * 2;
+            let y = Math.random() * (canvas.height - size * 4) + size * 2;
+            let velX = (Math.random() * 1.6) - 0.8;
+            let velY = (Math.random() * 1.6) - 0.8;
+
+            particlesArray.push(new Particle(x, y, velX, velY, size));
+        }
+    }
+
+    function connect(colors) {
+        const vicinityDistSq = (canvas.width * canvas.height) / 70;
+        const maxDist = Math.sqrt(vicinityDistSq);
+
+        for (let i = 0; i < particlesArray.length; i++) {
+            for (let j = i + 1; j < particlesArray.length; j++) {
+                let dx = particlesArray[i].x - particlesArray[j].x;
+                let dy = particlesArray[i].y - particlesArray[j].y;
+                let distSq = dx * dx + dy * dy;
+
+                if (distSq < vicinityDistSq) {
+                    let dist = Math.sqrt(distSq);
+                    let opacity = (1 - dist / maxDist) * 0.45;
+                    ctx.strokeStyle = `rgba(${colors.lineColorRgb}, ${opacity.toFixed(3)})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+                    ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function animate() {
+        if (!isSectionVisible) return;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const colors = getThemeColors();
+
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update(colors);
+        }
+        connect(colors);
+
+        animationFrameId = requestAnimationFrame(animate);
+    }
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!isSectionVisible) {
+                    isSectionVisible = true;
+                    resizeCanvas();
+                    animate();
+                }
+            } else {
+                isSectionVisible = false;
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                    animationFrameId = null;
+                }
+            }
+        });
+    }, { threshold: 0.05 });
+
+    sectionObserver.observe(section);
+})();
