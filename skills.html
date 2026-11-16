@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="editorial">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical competencies and instrumentation expertise of Dr. Ashwani Punia, PhD: Mass Spectrometry, Analytical Chemistry, Computational Biology, and Biochemistry.">
+  <meta name="author" content="Dr. Ashwani Punia">
+  <title>Technical Competencies &amp; Methodologies | Dr. Ashwani Punia, PhD</title>
+
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Technical Competencies &amp; Methodologies | Dr. Ashwani Punia, PhD">
+  <meta property="og:description" content="Mass spectrometry, chromatography, instrumentation, and computational biology expertise of Dr. Ashwani Punia.">
+  <meta property="og:image" content="https://ashwanipunia.github.io/portfolio/FACE.png">
+  <meta property="og:url" content="https://ashwanipunia.github.io/portfolio/skills.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Technical Competencies &amp; Methodologies | Dr. Ashwani Punia, PhD">
+  <meta name="twitter:description" content="High-resolution mass spectrometry (IMS-QTOF), proteomics, and computational multi-omics.">
+  <meta name="twitter:image" content="https://ashwanipunia.github.io/portfolio/FACE.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://ashwanipunia.github.io/portfolio/skills.html">
+
+  <!-- Early theme initialization -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        document.documentElement.setAttribute('data-theme', t || 'editorial');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'editorial');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Primary Profile Controller (Docked Left Control) -->
+  <aside id="profile-controller" class="profile-controller" aria-label="Profile Display Controller">
+    <button type="button" id="profile-controller-toggle" class="profile-controller-toggle" aria-expanded="false" title="Customize Profile Display">
+      <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+      <span class="controller-toggle-label">Profile Lens</span>
+    </button>
+    <div class="profile-controller-panel" id="profile-controller-panel">
+      <button type="button" id="profile-controller-close" class="controller-close-btn" aria-label="Close profile controller">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="controller-header">
+        <div class="controller-title-row">
+          <i class="fa-solid fa-user-gear controller-icon" aria-hidden="true"></i>
+          <h3 class="controller-title">Primary Profile Lens</h3>
+        </div>
+        <p class="controller-desc">Select which specialized scientific profile to emphasize to viewers:</p>
+      </div>
+      <div class="controller-options" role="radiogroup" aria-label="Select Academic Profile Persona">
+        <label class="profile-opt-card active" data-profile="all">
+          <input type="radio" name="profile_lens" value="all" checked>
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-globe"></i> Comprehensive Profile</div>
+            <div class="opt-meta">Full academic dossier across all disciplines</div>
+          </div>
+        </label>
+        <label class="profile-opt-card" data-profile="metabolomics">
+          <input type="radio" name="profile_lens" value="metabolomics">
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-seedling"></i> Metabolomics Specialist</div>
+            <div class="opt-meta">Secondary metabolism, IMS-QTOF, 266-compound map</div>
+          </div>
+        </label>
+        <label class="profile-opt-card" data-profile="proteomics">
+          <input type="radio" name="profile_lens" value="proteomics">
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-dna"></i> Proteomics &amp; Systems Biology</div>
+            <div class="opt-meta">Quantitative DIA/DDA, protein maps &amp; network biology</div>
+          </div>
+        </label>
+        <label class="profile-opt-card" data-profile="discovery">
+          <input type="radio" name="profile_lens" value="discovery">
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-capsules"></i> Bioactive Peptides &amp; Drug Discovery</div>
+            <div class="opt-meta">Natural products, cardioprotective leads &amp; docking</div>
+          </div>
+        </label>
+      </div>
+      <div class="controller-footer">
+        <div class="active-lens-indicator">
+          <span class="lens-dot"></span>
+          <span id="active-lens-text">Showing: Comprehensive Profile</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="Dr. Ashwani Punia Home">
+        <img src="FACE.png" alt="Dr. Ashwani Punia" class="brand-avatar" width="38" height="38">
+        <div class="brand-info">
+          <span class="brand-name">Dr. Ashwani Punia</span>
+          <span class="brand-sub"></span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="primary-navigation">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="skills.html" class="nav-link active" aria-current="page">Skills</a></li>
+          <li class="nav-item"><a href="experience.html" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="publications.html" class="nav-link">Publications</a></li>
+          <li class="nav-item"><a href="awards.html" class="nav-link">Awards</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item nav-mobile-cv">
+            <a href="Ashwani_Punia_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-sm" style="width: 100%;">
+              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="Ashwani_Punia_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-link" title="Download Academic Curriculum Vitae">
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>CV</span>
+        </a>
+
+        
+
+        <!-- 4-Theme Switcher -->
+        <div class="theme-switcher" role="group" aria-label="Visual Theme Switcher">
+          
+          <button type="button" class="theme-btn" data-theme="technical" aria-pressed="false" aria-label="Technical theme">
+            <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+            <span></span>
+          </button>
+          <button type="button" class="theme-btn" data-theme="cosmic" aria-pressed="false" aria-label="Cosmic theme">
+            <i class="fa-solid fa-atom" aria-hidden="true"></i>
+            <span></span>
+          </button>
+        </div>
+
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation" type="button">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Header & Breadcrumb -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="breadcrumb-current" aria-current="page">Technical Competencies</span>
+        </nav>
+        <h1 class="page-title">Technical Competencies &amp; Methodologies</h1>
+        <p class="page-lead">
+          Comprehensive overview of specialized instrumentation mastery, high-resolution tandem mass spectrometry workflows, chromatographic separation sciences, and computational multi-omics pipelines.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Domains -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+
+        <!-- Domain 1: Mass Spectrometry & Proteomics -->
+        <div class="skills-domain-card" data-profile="proteomics">
+          <div class="skills-domain-header">
+            <div class="skills-domain-icon" aria-hidden="true">
+              <i class="fa-solid fa-atom"></i>
+            </div>
+            <div>
+              <h2 class="skills-domain-title">Mass Spectrometry &amp; Proteomics</h2>
+              <p class="skills-domain-lead">High-resolution tandem MS workflows, quantitative proteomics, and intact biomolecular characterization.</p>
+            </div>
+          </div>
+          <div class="skills-tags-grid">
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">DIA &amp; DDA Workflows</div>
+              <p class="skill-pill-detail">Data-Independent Acquisition and Data-Dependent Acquisition strategies for deep proteome and metabolome coverage.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Medicinal Proteomics</div>
+              <p class="skill-pill-detail">Target identification, biomarker profiling, and comparative quantitative proteomics across physiological states.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Intact Protein Analysis</div>
+              <p class="skill-pill-detail">Top-down and intact mass spectrometry for accurate molecular weight determination and subunit verification.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">PTM Profiling</div>
+              <p class="skill-pill-detail">Mapping and structural validation of post-translational modifications, including phosphorylation and glycosylation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Domain 2: Analytical Chemistry -->
+        <div class="skills-domain-card" data-profile="metabolomics">
+          <div class="skills-domain-header">
+            <div class="skills-domain-icon" aria-hidden="true">
+              <i class="fa-solid fa-vials"></i>
+            </div>
+            <div>
+              <h2 class="skills-domain-title">Analytical Chemistry &amp; Separation Sciences</h2>
+              <p class="skills-domain-lead">Chromatographic method development, hyphenated separation sciences, and purification protocols.</p>
+            </div>
+          </div>
+          <div class="skills-tags-grid">
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">HPLC &amp; UHPLC</div>
+              <p class="skill-pill-detail">Reversed-phase, HILIC, and ion-exchange chromatographic separation method optimization and validation.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">LC-MS/MS Coupling</div>
+              <p class="skill-pill-detail">Hyphenated liquid chromatography tandem mass spectrometry for complex botanical and mammalian extracts.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">FPLC (AKTA® pure)</div>
+              <p class="skill-pill-detail">Automated fast protein liquid chromatography for protein purification, size exclusion, and affinity chromatography.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Ultracentrifugation</div>
+              <p class="skill-pill-detail">Density gradient fractionation and subcellular isolation of membrane complexes and organelle components.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Domain 3: Instrumentation Expertise -->
+        <div class="skills-domain-card" data-profile="metabolomics">
+          <div class="skills-domain-header">
+            <div class="skills-domain-icon" aria-hidden="true">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <div>
+              <h2 class="skills-domain-title">Instrumentation Expertise</h2>
+              <p class="skills-domain-lead">Hands-on operational mastery, routine calibration, and advanced method parameter tuning on premier platforms.</p>
+            </div>
+          </div>
+          <div class="skills-tags-grid">
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Agilent 6560 Ion Mobility Q-TOF</div>
+              <p class="skill-pill-detail">Drift tube ion mobility coupled with high-resolution QTOF for resolving isobaric and isomeric metabolites.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">MALDI-TOF/TOF (Bruker)</div>
+              <p class="skill-pill-detail">Matrix-Assisted Laser Desorption/Ionization for rapid peptide mass fingerprinting and MS imaging.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">UHPLC-DAD-QTOF-MS/MS</div>
+              <p class="skill-pill-detail">High-resolution MS/MS acquisition with dual photodiode array detection for targeted and untargeted omics.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">IDEAS ImageStream</div>
+              <p class="skill-pill-detail">Multispectral imaging flow cytometry for high-throughput single-cell morphological and fluorescent analysis.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">QuantStudio 3 &amp; CFX Opus 96</div>
+              <p class="skill-pill-detail">Quantitative Real-Time PCR systems for gene expression validation and transcriptomic correlation.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Gas Chromatography-MS (GC-MS)</div>
+              <p class="skill-pill-detail">Volatile metabolite profiling, fatty acid methyl ester (FAME) analysis, and derivatized polar compound screening.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Domain 4: Computational Biology & Bioinformatics -->
+        <div class="skills-domain-card" data-profile="discovery">
+          <div class="skills-domain-header">
+            <div class="skills-domain-icon" aria-hidden="true">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div>
+              <h2 class="skills-domain-title">Computational Biology &amp; Bioinformatics</h2>
+              <p class="skills-domain-lead">Chemometric modeling, spectral deconvolution, docking simulations, and high-throughput biological data analysis.</p>
+            </div>
+          </div>
+          <div class="skills-tags-grid">
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Molecular Docking</div>
+              <p class="skill-pill-detail">In silico screening and binding affinity prediction of bioactive natural products with human therapeutic targets.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Network Biology</div>
+              <p class="skill-pill-detail">Protein-protein interaction (PPI) networks, compound-target-pathway mapping, and modular topological analysis.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">MS-DIAL Platform</div>
+              <p class="skill-pill-detail">Raw spectral deconvolution, ion mobility-assisted peak alignment, and spectral library matching for metabolomics.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">MetaboAnalyst Suite</div>
+              <p class="skill-pill-detail">Multivariate statistical modeling (PCA, PLS-DA, OPLS-DA), enrichment analysis, and pathway topology profiling.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Statistical Analysis</div>
+              <p class="skill-pill-detail">Rigorous univariate and multivariate statistical evaluation of high-throughput omics datasets.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Domain 5: Biochemistry & Experimental Techniques -->
+        <div class="skills-domain-card">
+          <div class="skills-domain-header">
+            <div class="skills-domain-icon" aria-hidden="true">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <div>
+              <h2 class="skills-domain-title">Biochemistry &amp; Experimental Techniques</h2>
+              <p class="skills-domain-lead">Cell culture models, biochemical assays, biomolecular extraction, and functional biological screening.</p>
+            </div>
+          </div>
+          <div class="skills-tags-grid">
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Mammalian Cell Culture</div>
+              <p class="skill-pill-detail">Aseptic propagation, passaging, cell viability assays (MTT/CCK-8), and pharmacological treatments in cellular models.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Enzyme Kinetics &amp; Assays</div>
+              <p class="skill-pill-detail">Substrate affinity (Km, Vmax), inhibition mechanism determination, and photometric/fluorometric enzyme assays.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Antimicrobial Screening</div>
+              <p class="skill-pill-detail">Minimum Inhibitory Concentration (MIC) determination and bioassay-guided fractionation against bacterial strains.</p>
+            </div>
+            <div class="skill-pill-card">
+              <div class="skill-pill-name">Extraction &amp; Isolation</div>
+              <p class="skill-pill-detail">Solid-liquid extraction, solid-phase extraction (SPE), preparative column chromatography, and biomolecule isolation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytical Workflow & Multi-Omics Pipeline Schematic -->
+        <div class="pipeline-workflow" aria-labelledby="pipeline-heading">
+          <div class="pipeline-header">
+            <h2 id="pipeline-heading" class="pipeline-title">High-Resolution Multi-Omics Workflow</h2>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">
+              Standardized five-phase analytical pipeline from botanical extraction to structural identification and bioinformatics integration.
+            </p>
+          </div>
+          <div class="pipeline-steps-grid">
+            <!-- Step 1 -->
+            <div class="pipeline-step">
+              <div class="pipeline-step-top">
+                <span class="pipeline-step-num">PHASE 01</span>
+                <i class="fa-solid fa-leaf pipeline-step-icon" aria-hidden="true"></i>
+              </div>
+              <div class="pipeline-step-name">Extraction &amp; Sample Prep</div>
+              <p class="pipeline-step-desc">
+                Lyophilization, ultrasonic/SPE extraction, protein precipitation, and internal standard spiking (accuracy &gt; 98%).
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="pipeline-step">
+              <div class="pipeline-step-top">
+                <span class="pipeline-step-num">PHASE 02</span>
+                <i class="fa-solid fa-filter pipeline-step-icon" aria-hidden="true"></i>
+              </div>
+              <div class="pipeline-step-name">UHPLC Separation</div>
+              <p class="pipeline-step-desc">
+                Sub-2 &mu;m reversed-phase (C18) &amp; HILIC columns with dual DAD photodiode array detection and gradient optimization.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="pipeline-step">
+              <div class="pipeline-step-top">
+                <span class="pipeline-step-num">PHASE 03</span>
+                <i class="fa-solid fa-wind pipeline-step-icon" aria-hidden="true"></i>
+              </div>
+              <div class="pipeline-step-name">Ion Mobility Spectrometry</div>
+              <p class="pipeline-step-desc">
+                Drift-tube IMS resolving isobaric and isomeric secondary metabolites via collision cross-section (CCS) measurements.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="pipeline-step">
+              <div class="pipeline-step-top">
+                <span class="pipeline-step-num">PHASE 04</span>
+                <i class="fa-solid fa-bolt-lightning pipeline-step-icon" aria-hidden="true"></i>
+              </div>
+              <div class="pipeline-step-name">QTOF MS/MS Fragmentation</div>
+              <p class="pipeline-step-desc">
+                High-resolution accurate mass (&lt; 2 ppm) tandem MS/MS acquisition across low and high collision energies (CID).
+              </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="pipeline-step">
+              <div class="pipeline-step-top">
+                <span class="pipeline-step-num">PHASE 05</span>
+                <i class="fa-solid fa-network-wired pipeline-step-icon" aria-hidden="true"></i>
+              </div>
+              <div class="pipeline-step-name">Bioinformatics &amp; Modeling</div>
+              <p class="pipeline-step-desc">
+                MS-DIAL deconvolution, MetaboAnalyst pathway enrichment, molecular docking simulations, and network biology mapping.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Methodological Rigor Callout -->
+    <section class="section section-alt" aria-labelledby="standards-heading">
+      <div class="container">
+        <div class="card" style="border-left: 4px solid var(--color-accent);">
+          <h2 id="standards-heading" class="card-title" style="font-size: 1.35rem;">
+            <i class="fa-solid fa-certificate" style="color: var(--color-accent); margin-right: 0.5rem;" aria-hidden="true"></i>
+            Methodological Rigor &amp; Quality Control
+          </h2>
+          <p style="margin-bottom: 0.75rem;">
+            All analytical methods and mass spectrometry workflows adhere to international standards for precision, reproducibility, and mass accuracy (typically &lt; 5 ppm). Routine calibration protocols, internal standards, and randomized run-order designs ensure data integrity across large-cohort metabolomics and quantitative proteomics studies.
+          </p>
+          <div style="margin-top: 1rem;">
+            <a href="publications.html" class="btn btn-secondary btn-sm">
+              See Published Methodologies <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Institutional Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <div class="footer-brand-title">Dr. Ashwani Punia, PhD</div>
+          <div class="footer-brand-role">Biochemist &amp; Mass Spectrometry Specialist</div>
+          <p class="footer-brand-desc">
+            CSIR-Institute of Himalayan Bioresource Technology (CSIR-IHBT), Palampur, HP, India &amp; Academy of Scientific and Innovative Research (AcSIR). Dedicated to advancing metabolomics, proteomics, and therapeutic natural product chemistry.
+          </p>
+          <div class="hero-profiles" style="border: none; padding-top: 0;">
+            <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=cunYBgoAAAAJ" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="Google Scholar" aria-label="Google Scholar profile">
+              <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+            </a>
+            <a href="https://orcid.org/0009-0001-9700-7668" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="ORCID Profile" aria-label="ORCID profile">
+              <i class="fa-brands fa-orcid" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.researchgate.net/profile/Ashwani-Punia-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="ResearchGate" aria-label="ResearchGate profile">
+              <i class="fa-brands fa-researchgate" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ashwani-punia-a8b10917b/" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="LinkedIn" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Portfolio Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home / Profile</a></li>
+            <li><a href="skills.html" class="footer-link">Technical Competencies</a></li>
+            <li><a href="experience.html" class="footer-link">Research Experience</a></li>
+            <li><a href="education.html" class="footer-link">Academic Education</a></li>
+            <li><a href="publications.html" class="footer-link">Scholarly Publications</a></li>
+            <li><a href="awards.html" class="footer-link">Honors &amp; Awards</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact &amp; Affiliation</div>
+          <ul class="footer-links-list">
+            <li><span style="color: var(--color-text-muted);"><i class="fa-solid fa-location-dot" style="margin-right: 0.4rem;" aria-hidden="true"></i> CSIR-IHBT, Palampur, HP, India</span></li>
+            <li><a href="mailto:ashwanipunia@yahoo.com" class="footer-link"><i class="fa-solid fa-envelope" style="margin-right: 0.4rem;" aria-hidden="true"></i> ashwanipunia@yahoo.com</a></li>
+            <li><a href="mailto:ashwani.ihbt20a@acsir.res.in" class="footer-link"><i class="fa-solid fa-envelope-open" style="margin-right: 0.4rem;" aria-hidden="true"></i> ashwani.ihbt20a@acsir.res.in</a></li>
+            
+            <li style="margin-top: 1rem;"><a href="Ashwani_Punia_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-link" style="display: inline-flex;"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Curriculum Vitae (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Dr. Ashwani Punia. All rights reserved. 
+        </div>
+        <div class="footer-logo-wrap">
+          <img src="logo.png" alt="CSIR-IHBT Institutional Logo" width="180" height="36">
+        </div>
+        <div>
+          <button class="back-to-top" type="button" aria-label="Back to top of page">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

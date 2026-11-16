@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="editorial">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peer-reviewed publications, reviews, and book chapters authored by Dr. Ashwani Punia in high-impact journals including Journal of Proteome Research, Critical Reviews in Biotechnology, and Journal of Proteomics.">
+  <meta name="author" content="Dr. Ashwani Punia">
+  <title>Scholarly Publications &amp; Research Repository | Dr. Ashwani Punia, PhD</title>
+
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Scholarly Publications &amp; Research Repository | Dr. Ashwani Punia, PhD">
+  <meta property="og:description" content="Peer-reviewed scholarly articles, reviews, and book chapters in metabolomics, proteomics, and phytochemistry.">
+  <meta property="og:image" content="https://ashwanipunia.github.io/portfolio/FACE.png">
+  <meta property="og:url" content="https://ashwanipunia.github.io/portfolio/publications.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scholarly Publications | Dr. Ashwani Punia, PhD">
+  <meta name="twitter:description" content="Peer-reviewed articles, reviews, and book chapters in metabolomics, proteomics, and natural product discovery.">
+  <meta name="twitter:image" content="https://ashwanipunia.github.io/portfolio/FACE.png">
+
+  <!-- Google Scholar Highwire Press Citation Indexing Metadata -->
+  <meta name="citation_author" content="Punia, Ashwani">
+  <meta name="citation_author_institution" content="CSIR-Institute of Himalayan Bioresource Technology">
+  <meta name="citation_title" content="Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="Journal of Proteome Research">
+  <meta name="citation_doi" content="10.1021/acs.jproteome.5c00809">
+  <meta name="citation_title" content="Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis in plants">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="Critical Reviews in Biotechnology">
+  <meta name="citation_doi" content="10.1080/07388551.2026.2619534">
+  <meta name="citation_title" content="Proteomic and metabolomic insights into seed germination of Ferula assa-foetida">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_journal_title" content="Journal of Proteomics">
+  <meta name="citation_doi" content="10.1016/j.jprot.2024.105176">
+  <meta name="citation_title" content="Identification and quantification of eight alkaloids in Aconitum heterophyllum using UHPLC-DAD-QTOF-IMS: A valuable tool for quality control">
+  <meta name="citation_publication_date" content="2022">
+  <meta name="citation_journal_title" content="Phytochemical Analysis">
+  <meta name="citation_doi" content="10.1002/pca.3164">
+  <meta name="citation_title" content="In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map using mass spectrometry">
+  <meta name="citation_publication_date" content="2021">
+  <meta name="citation_journal_title" content="BMC Plant Biology">
+  <meta name="citation_doi" content="10.1186/s12870-021-03394-8">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="canonical" href="https://ashwanipunia.github.io/portfolio/publications.html">
+
+  <!-- Early theme initialization -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        document.documentElement.setAttribute('data-theme', t || 'editorial');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'editorial');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Primary Profile Controller (Docked Left Control) -->
+  <aside id="profile-controller" class="profile-controller" aria-label="Profile Display Controller">
+    <button type="button" id="profile-controller-toggle" class="profile-controller-toggle" aria-expanded="false" title="Customize Profile Display">
+      <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+      <span class="controller-toggle-label">Profile Lens</span>
+    </button>
+    <div class="profile-controller-panel" id="profile-controller-panel">
+      <button type="button" id="profile-controller-close" class="controller-close-btn" aria-label="Close profile controller">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="controller-header">
+        <div class="controller-title-row">
+          <i class="fa-solid fa-user-gear controller-icon" aria-hidden="true"></i>
+          <h3 class="controller-title">Primary Profile Lens</h3>
+        </div>
+        <p class="controller-desc">Select which specialized scientific profile to emphasize to viewers:</p>
+      </div>
+      <div class="controller-options" role="radiogroup" aria-label="Select Academic Profile Persona">
+        <label class="profile-opt-card active" data-profile="all">
+          <input type="radio" name="profile_lens" value="all" checked>
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-globe"></i> Comprehensive Profile</div>
+            <div class="opt-meta">Full academic dossier across all disciplines</div>
+          </div>
+        </label>
+        <label class="profile-opt-card" data-profile="metabolomics">
+          <input type="radio" name="profile_lens" value="metabolomics">
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-seedling"></i> Metabolomics Specialist</div>
+            <div class="opt-meta">Secondary metabolism, IMS-QTOF, 266-compound map</div>
+          </div>
+        </label>
+        <label class="profile-opt-card" data-profile="proteomics">
+          <input type="radio" name="profile_lens" value="proteomics">
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-dna"></i> Proteomics &amp; Systems Biology</div>
+            <div class="opt-meta">Quantitative DIA/DDA, protein maps &amp; network biology</div>
+          </div>
+        </label>
+        <label class="profile-opt-card" data-profile="discovery">
+          <input type="radio" name="profile_lens" value="discovery">
+          <div class="opt-content">
+            <div class="opt-name"><i class="fa-solid fa-capsules"></i> Bioactive Peptides &amp; Drug Discovery</div>
+            <div class="opt-meta">Natural products, cardioprotective leads &amp; docking</div>
+          </div>
+        </label>
+      </div>
+      <div class="controller-footer">
+        <div class="active-lens-indicator">
+          <span class="lens-dot"></span>
+          <span id="active-lens-text">Showing: Comprehensive Profile</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand" aria-label="Dr. Ashwani Punia Home">
+        <img src="FACE.png" alt="Dr. Ashwani Punia" class="brand-avatar" width="38" height="38">
+        <div class="brand-info">
+          <span class="brand-name">Dr. Ashwani Punia</span>
+          <span class="brand-sub"></span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="primary-navigation">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="experience.html" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="education.html" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="publications.html" class="nav-link active" aria-current="page">Publications</a></li>
+          <li class="nav-item"><a href="awards.html" class="nav-link">Awards</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item nav-mobile-cv">
+            <a href="Ashwani_Punia_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold btn-sm" style="width: 100%;">
+              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="Ashwani_Punia_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-link" title="Download Academic Curriculum Vitae">
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>CV</span>
+        </a>
+
+        
+        <!-- 4-Theme Switcher -->
+        <div class="theme-switcher" role="group" aria-label="Visual Theme Switcher">
+          
+          <button type="button" class="theme-btn" data-theme="technical" aria-pressed="false" aria-label="Technical theme">
+            <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+            <span></span>
+          </button>
+          <button type="button" class="theme-btn" data-theme="cosmic" aria-pressed="false" aria-label="Cosmic theme">
+            <i class="fa-solid fa-atom" aria-hidden="true"></i>
+            <span></span>
+          </button>
+        </div>
+
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation" type="button">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Header & Breadcrumb -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          <span class="breadcrumb-current" aria-current="page">Publications</span>
+        </nav>
+        <h1 class="page-title">Scholarly Publications &amp; Research Repository</h1>
+        <p class="page-lead">
+          Peer-reviewed research articles, high-impact invited reviews, and authoritative book chapters spanning analytical mass spectrometry, metabolomics, biochemistry, and bioactive peptide discovery.
+        </p>
+      </div>
+    </section>
+
+    <!-- Metrics Banner -->
+    <section class="section" style="padding-top: 0; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="metrics-banner">
+          <div class="metric-item">
+            <div class="metric-icon" aria-hidden="true"><i class="fa-solid fa-book-journal-whills"></i></div>
+            <div>
+              <div class="metric-number">8</div>
+              <div class="metric-label">Total Peer-Reviewed Works</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon" aria-hidden="true"><i class="fa-solid fa-quote-right"></i></div>
+            <div>
+              <div class="metric-number">65+</div>
+              <div class="metric-label">Academic Citations</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <div class="metric-number">4</div>
+              <div class="metric-label">h-Index Metric</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></div>
+            <div>
+              <div class="metric-number">8.7</div>
+              <div class="metric-label">Highest Journal IF</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Profile Links Banner -->
+        <div class="card" style="padding: 1.25rem 1.75rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2rem;">
+          <div style="font-size: 0.95rem; font-weight: 600; color: var(--color-heading);">
+            <i class="fa-solid fa-id-card" style="color: var(--color-accent); margin-right: 0.5rem;" aria-hidden="true"></i> External Scientific Repositories:
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+            <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=cunYBgoAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-google-scholar" aria-hidden="true"></i> Google Scholar
+            </a>
+            <a href="https://orcid.org/0009-0001-9700-7668" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-orcid" aria-hidden="true"></i> ORCID (0009-0001-9700-7668)
+            </a>
+            <a href="https://www.researchgate.net/profile/Ashwani-Punia-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <i class="fa-brands fa-researchgate" aria-hidden="true"></i> ResearchGate
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Search & Filtering Toolbar -->
+        <div class="pub-toolbar" aria-label="Publication search and filters">
+          <div class="pub-search-wrap">
+            <i class="fa-solid fa-search pub-search-icon" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="pub-search"
+              class="pub-search-input"
+              placeholder="Search by publication title, co-author, journal, or topic..."
+              aria-label="Search publications"
+            >
+          </div>
+
+          <div class="pub-filter-controls">
+            <div class="pub-type-filters" role="tablist" aria-label="Filter publications by type">
+              <button type="button" class="pub-filter-btn active" data-filter="all" role="tab" aria-selected="true">All (8)</button>
+              <button type="button" class="pub-filter-btn" data-filter="journal" role="tab" aria-selected="false">Journal Articles (4)</button>
+              <button type="button" class="pub-filter-btn" data-filter="review" role="tab" aria-selected="false">Reviews (2)</button>
+              <button type="button" class="pub-filter-btn" data-filter="book" role="tab" aria-selected="false">Book Chapters (2)</button>
+            </div>
+
+            <div class="pub-filter-secondary">
+              <label for="pub-year-select" class="sr-only">Filter by Publication Year</label>
+              <select id="pub-year-select" class="pub-year-select" aria-label="Select publication year">
+                <option value="all">All Years (2021–2026)</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+              </select>
+
+              <button type="button" id="pub-clear-btn" class="pub-clear-btn" title="Reset all active search and filters">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset Filters
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Topic & Keyword Cloud Filter -->
+        <div class="pub-theme-cloud" aria-label="Filter publications by research topic">
+          <span class="pub-theme-label"><i class="fa-solid fa-tags" aria-hidden="true"></i> Topics:</span>
+          <button type="button" class="pub-theme-pill active" data-theme-filter="all">All Topics</button>
+          <button type="button" class="pub-theme-pill" data-theme-filter="metabolomics">Metabolomics</button>
+          <button type="button" class="pub-theme-pill" data-theme-filter="proteomics">Quantitative Proteomics</button>
+          <button type="button" class="pub-theme-pill" data-theme-filter="discovery">Bioactive Peptides</button>
+          <button type="button" class="pub-theme-pill" data-theme-filter="alkaloid">Alkaloids &amp; IMS-QTOF</button>
+          <button type="button" class="pub-theme-pill" data-theme-filter="seed">Seed Germination</button>
+          <button type="button" class="pub-theme-pill" data-theme-filter="cardiomyopathy">Cardioprotection</button>
+        </div>
+
+        <!-- Results Counter Bar with BibTeX Download Action -->
+        <div class="pub-results-bar" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;">
+          <div>
+            Showing <span id="pub-count-display" class="pub-count-highlight">8</span> of 8 scholarly publications
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <button type="button" id="download-all-bibtex" class="btn-bibtex" title="Download complete bibliography in BibTeX format for Zotero, Mendeley, EndNote, LaTeX">
+              <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download Bibliography (.bib)
+            </button>
+          </div>
+        </div>
+
+        <!-- Publication List -->
+        <div id="publications-container" class="publications-list" role="region" aria-live="polite" aria-label="Publications repository">
+
+          <!-- Publication 1 -->
+          <article class="pub-card" data-pub-type="journal" data-pub-year="2026" data-profile="discovery">
+            <div class="pub-header-badges">
+              <span class="badge badge-journal">Journal Article</span>
+              <span class="badge badge-year">2026</span>
+              <span class="badge badge-if">Impact Factor: 3.8</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.5c00809" target="_blank" rel="noopener noreferrer">
+                Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model
+              </a>
+            </h2>
+            <p class="pub-authors">
+              Shweta Thakur, Savita Kumari, <strong>Ashwani Punia</strong>, Vikram Patial, Damanpreet Singh, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Journal of Proteome Research</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1021/acs.jproteome.5c00809" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1021/acs.jproteome.5c00809
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-1">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Thakur, S., Kumari, S., Punia, A., Patial, V., Singh, D., &amp; Kumar, R. (2026). Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model. Journal of Proteome Research. https://doi.org/10.1021/acs.jproteome.5c00809" data-bibtex="@article{thakur2026multiomics, title={Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1) in cardiomyopathy using a zebrafish model}, author={Thakur, Shweta and Kumari, Savita and Punia, Ashwani and Patial, Vikram and Singh, Damanpreet and Kumar, Rajiv}, journal={Journal of Proteome Research}, year={2026}, doi={10.1021/acs.jproteome.5c00809}}" aria-label="Copy citation for Multi-omics analysis reveals the protective effect of a novel bioactive peptide (BP1)">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-1" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> Medicinal plants have been used in traditional healthcare systems and drug discovery since ancient times, owing to their storage of natural products, including bioactive metabolites and peptides. Bioactive peptides (BPs) are reported to have diverse therapeutic potential and are used for the treatment/prevention of many lifelong diseases, including cardiovascular. In our previous work, we isolated and characterized a bioactive peptide, ASGLCPEEAVPRR (BP1), from <i>Picrorhiza kurroa</i> and hypothesized that BP1 possesses angiotensin-converting enzyme (ACE) inhibitory activity, which has a cardioprotective role; however, a system-level understanding of its cardioprotective and metabolic control is needed to validate the hypothesis. Here, we investigated the cardioprotective effect of BP1 in zebrafish larvae and adult models of isoproterenol (ISO)- and doxorubicin (DOX)-induced cardiac damage, respectively. Following the treatment, the cardiac morphology, cardiac functional parameters, transcriptome, and metabolome were studied. Results indicated that treatment with BP1 significantly reduced ISO-induced cardiac dysfunction in zebrafish larvae. Similarly, BP1 pretreatment effectively mitigated the DOX-induced pathological changes in the myocardium of zebrafish. Transcriptomic and weighted gene coexpression network analysis (WGCNA) showed attenuation in the expression of genes associated with protein synthesis, metabolic pathways, signaling pathways, and cardiac muscle contraction, among others, following BP1 treatment in the DOX-induced cardiotoxicity model. Untargeted metabolomics revealed metabolic pathways such as sphingolipid, riboflavin, and glutathione metabolism, among others, involved in attenuating DOX-induced cardiotoxicity by BP1. Our results concluded that BP1 treatment showed cardioprotection in zebrafish <i>via</i> targeting multiple pathogenic pathways involved in cardiotoxicity</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 2 -->
+          <article class="pub-card" data-pub-type="review" data-pub-year="2026" data-profile="metabolomics">
+            <div class="pub-header-badges">
+              <span class="badge badge-review">Review Article</span>
+              <span class="badge badge-year">2026</span>
+              <span class="badge badge-if">Impact Factor: 8.7</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://www.tandfonline.com/doi/full/10.1080/07388551.2026.2619534" target="_blank" rel="noopener noreferrer">
+                Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis in plants
+              </a>
+            </h2>
+            <p class="pub-authors">
+              <strong>Ashwani Punia</strong>, Satyakam, Vishal Saini, Monika Chouhan, Niranjan Chakraborty, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Critical Reviews in Biotechnology</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1080/07388551.2026.2619534" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1080/07388551.2026.2619534
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-2">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Punia, A., Satyakam, Saini, V., Chouhan, M., Chakraborty, N., &amp; Kumar, R. (2026). Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis in plants. Critical Reviews in Biotechnology. https://doi.org/10.1080/07388551.2026.2619534" data-bibtex="@article{punia2026dancing, title={Dancing to the tune of the light regime: from perception to secondary metabolite biosynthesis in plants}, author={Punia, Ashwani and Satyakam and Saini, Vishal and Chouhan, Monika and Chakraborty, Niranjan and Kumar, Rajiv}, journal={Critical Reviews in Biotechnology}, year={2026}, doi={10.1080/07388551.2026.2619534}}" aria-label="Copy citation for Dancing to the tune of the light regime">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-2" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> The orchestra of ambient light intensity and wavelengths are pivotal in regulating the biosynthesis of secondary metabolites. Hence, the implications of light on plants’ secondary metabolites are an active area of research, and new information is slowly being accrued. Plants have inbuilt light-sensitive molecules, such as: phytochromes, cryptochromes, phototropins, UVR8, and zeitlupe family proteins. In particular, blue light absorbed by cryptochrome has positive effects on antioxidants and other bioactive compounds. However, far-red light perceived by phytochrome reduces anthocyanin biosynthesis in plants, whereas mixed light in varying proportions is more beneficial for secondary metabolite synthesis. This article reviews the current information on plants’ perception of light, their downstream signaling, and the role of different light regimes on secondary metabolite biosynthesis and accumulation. It also examines the epigenetic regulation of secondary metabolite biosynthesis under various light regimes. Additionally, the review examines the economic and medicinal aspects of manipulating/controlling/optimizing secondary metabolite synthesis by light modulation. Consequently, this review is expected to benefit any researchers involved in fundamental and applied research.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 3 -->
+          <article class="pub-card" data-pub-type="book" data-pub-year="2025" data-profile="metabolomics">
+            <div class="pub-header-badges">
+              <span class="badge badge-book">Book Chapter</span>
+              <span class="badge badge-year">2025</span>
+              <span class="badge badge-if">Springer Nature</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://link.springer.com/protocol/10.1007/978-1-0716-4981-7_10" target="_blank" rel="noopener noreferrer">
+                Mass Spectrometry-Based Methods for Plant Metabolite Profiling
+              </a>
+            </h2>
+            <p class="pub-authors">
+              <strong>Ashwani Punia</strong>, Satyakam, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Plant Stress Memory: Methods and Protocols, Methods in Molecular Biology</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1007/978-1-0716-4981-7_10" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1007/978-1-0716-4981-7_10
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-3">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Punia, A., Satyakam, &amp; Kumar, R. (2025). Mass spectrometry-based methods for plant metabolite profiling. In Plant Stress Memory: Methods and Protocols, Methods in Molecular Biology. Springer Nature. https://doi.org/10.1007/978-1-0716-4981-7_10" data-bibtex="@incollection{punia2025mass, title={Mass Spectrometry-Based Methods for Plant Metabolite Profiling}, author={Punia, Ashwani and Satyakam and Kumar, Rajiv}, booktitle={Plant Stress Memory: Methods and Protocols, Methods in Molecular Biology}, year={2025}, publisher={Springer Nature}, doi={10.1007/978-1-0716-4981-7_10}}" aria-label="Copy citation for Mass Spectrometry-Based Methods for Plant Metabolite Profiling">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-3" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> Under natural conditions, cold and freezing stress is one of the detrimental factors plants face during their life cycle. For acclimatization, adaptation, and defense, plants accumulate specialized metabolites such as flavonoids, phenolics, alkaloids, saponins, and tannins. Identification of metabolites is especially important to study the impact and resilience toward stress conditions. The present chapter briefly describes metabolite profiling from a plant sample, including sample harvesting, metabolite extraction, identification, and quantification. The first and most crucial step in metabolomics is sample preparation (sample harvesting, drying, metabolite extraction, and preparation for analysis), which impacts the accuracy of the result and largely depends on analytical tools and the class of metabolites. Liquid solvent extraction of alkaloids, saponins, and tannins has been discussed. Advanced extraction methods for volatile compounds, like headspace analysis and solid-phase microextraction (SPME), are also reviewed. We also discussed liquid chromatography-mass spectrometry (LC-MS) and gas chromatography-mass spectrometry (GC-MS) based protocols for metabolite profiling.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 4 -->
+          <article class="pub-card" data-pub-type="book" data-pub-year="2024" data-profile="discovery">
+            <div class="pub-header-badges">
+              <span class="badge badge-book">Book Chapter</span>
+              <span class="badge badge-year">2024</span>
+              <span class="badge badge-if">Springer Nature</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://link.springer.com/chapter/10.1007/978-981-97-3405-4_19" target="_blank" rel="noopener noreferrer">
+                Unlocking Ethnomedicinal Plant Potentials: Advancing Drug Discovery in the High-Throughput Omics Era
+              </a>
+            </h2>
+            <p class="pub-authors">
+              <strong>Ashwani Punia</strong>, Satyakam, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Ethnomedicinal Plants for Drug Discovery: Current Developments (pp. 443–462), Springer Nature Singapore</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1007/978-981-97-3405-4_19" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1007/978-981-97-3405-4_19
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-4">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Punia, A., Satyakam, &amp; Kumar, R. (2024). Unlocking ethnomedicinal plant potentials: Advancing drug discovery in the high-throughput omics era. In Ethnomedicinal Plants for Drug Discovery (pp. 443-462). Springer Nature. https://doi.org/10.1007/978-981-97-3405-4_19" data-bibtex="@incollection{punia2024unlocking, title={Unlocking Ethnomedicinal Plant Potentials: Advancing Drug Discovery in the High-Throughput Omics Era}, author={Punia, Ashwani and Satyakam and Kumar, Rajiv}, booktitle={Ethnomedicinal Plants for Drug Discovery: Current Developments}, pages={443--462}, year={2024}, publisher={Springer Nature Singapore}, doi={10.1007/978-981-97-3405-4_19}}" aria-label="Copy citation for Unlocking Ethnomedicinal Plant Potentials">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-4" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> Ethnomedicinal plants have been the source of drugs since the dawn of human civilization. A number of systems of traditional medicine have evolved from the application of ethnomedicinal plants for treating human disorders. Producing drugs from medicinal plants largely relied on chemical techniques like solvent extraction, distillation, fermentation, digestion, decoction, percolation, and chromatography until the advent of omics technologies during the early twenty-first century. The availability of human genome sequence data has propelled drug discovery, where knowledge of disease-susceptibility genes can be used to design drugs with minimal off-target effects. Understanding biochemical pathways using the genome sequence data can help identify new targets for drug development. Sequencing of medicinal plant genomes can help in understanding the metabolite pathways and uncover key intermediates that can be tweaked to enhance the production of bioactive chemicals. Metabolomic approaches are playing a crucial role in discovery of new drug molecules, as a major category of plant drugs are secondary metabolites. Metabolic engineering, combining the power of genetics, biochemistry, and system biology, has facilitated the development of novel drug molecules. Using a semi-synthetic approach to drug production involving metabolic engineering, we can scale up the production of plant-based drugs without negatively affecting endangered or threatened plant species. A lot of plant proteins have been discovered to play a role in combating diseases like cancer, diabetes, HIV, and microbial diseases. Developments in proteomic technologies like 2D-PAGE, mass spectrometry, MALDI-TOF, NMR, and protein interaction networks can minimize the time period required to develop new drugs and help in studying drug interactions and biosafety. We are witnessing a new era in the identification, purification, and production of plant-based medicinal compounds, greatly assisted by omics technologies enabling the mankind to effectively fight against severe and emerging diseases.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 5 -->
+          <article class="pub-card" data-pub-type="review" data-pub-year="2024" data-profile="discovery">
+            <div class="pub-header-badges">
+              <span class="badge badge-review">Review Article</span>
+              <span class="badge badge-year">2024</span>
+              <span class="badge badge-if">Impact Factor: 6.4</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926669024018326" target="_blank" rel="noopener noreferrer">
+                Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants
+              </a>
+            </h2>
+            <p class="pub-authors">
+              Shweta Thakur, <strong>Ashwani Punia</strong>, Satyakam, Vishal Acharya, Brijesh Kumar, Amit Prasad, Sudesh Kumar Yadav, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Industrial Crops and Products (Elsevier)</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1016/j.indcrop.2024.119855" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1016/j.indcrop.2024.119855
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-5">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Thakur, S., Punia, A., Satyakam, Acharya, V., Kumar, B., Prasad, A., Yadav, S. K., &amp; Kumar, R. (2024). Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants. Industrial Crops and Products, 222, 119855. https://doi.org/10.1016/j.indcrop.2024.119855" data-bibtex="@article{thakur2024bringing, title={Bringing bioactive peptides into drug discovery: Challenges and opportunities for medicinal plants}, author={Thakur, Shweta and Punia, Ashwani and Satyakam and Acharya, Vishal and Kumar, Brijesh and Prasad, Amit and Yadav, Sudesh Kumar and Kumar, Rajiv}, journal={Industrial Crops and Products}, volume={222}, pages={119855}, year={2024}, publisher={Elsevier}, doi={10.1016/j.indcrop.2024.119855}}" aria-label="Copy citation for Bringing bioactive peptides into drug discovery">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-5" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> The pervasiveness of lifestyle diseases is gradually increasing at an alarming rate worldwide. Physicians are prescribing many drug interventions to patients; however, the majority of them are found to have undesirable side effects. Thus, identifying natural alternatives is the principal goal of the pharma industry. Medicinal plants are the depository of diverse natural peptide products and peptides in the genome and awaiting their discovery. This review focuses on the techniques wet-lab and in silico, as well as their strengths and limitations, to extract, identify, and screen novel bioactive peptides. Once the bioactivities have been ascribed to a peptide using various <i>in silico</i> tools, docking is performed with the target to assess its interaction. Then, in vitro and in vivo experiments are designed to check their activity and efficacy on animal models. The discovery of novel bioactive peptides, augmented by advancements in recombinant technology and machine learning, is bound to keep pharmaceutical companies interested in peptide-based drugs. In addition, we have also discussed medicinal plants and novel approaches, such as DNA-based bioactive peptide development approaches currently being utilized in this regard.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 6 -->
+          <article class="pub-card" data-pub-type="journal" data-pub-year="2024" data-profile="proteomics">
+            <div class="pub-header-badges">
+              <span class="badge badge-journal">Journal Article</span>
+              <span class="badge badge-year">2024</span>
+              <span class="badge badge-if">Impact Factor: 3.1</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S1874391924001088" target="_blank" rel="noopener noreferrer">
+                Proteomic and metabolomic insights into seed germination of <em>Ferula assa-foetida</em>
+              </a>
+            </h2>
+            <p class="pub-authors">
+              <strong>Ashwani Punia</strong>, Manglesh Kumari, Monika Chouhan, Vishal Saini, Robin Joshi, Ashok Kumar, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Journal of Proteomics (Elsevier)</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1016/j.jprot.2024.105176" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1016/j.jprot.2024.105176
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-6">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Punia, A., Kumari, M., Chouhan, M., Saini, V., Joshi, R., Kumar, A., &amp; Kumar, R. (2024). Proteomic and metabolomic insights into seed germination of Ferula assa-foetida. Journal of Proteomics, 301, 105176. https://doi.org/10.1016/j.jprot.2024.105176" data-bibtex="@article{punia2024proteomic, title={Proteomic and metabolomic insights into seed germination of Ferula assa-foetida}, author={Punia, Ashwani and Kumari, Manglesh and Chouhan, Monika and Saini, Vishal and Joshi, Robin and Kumar, Ashok and Kumar, Rajiv}, journal={Journal of Proteomics}, volume={301}, pages={105176}, year={2024}, publisher={Elsevier}, doi={10.1016/j.jprot.2024.105176}}" aria-label="Copy citation for Proteomic and metabolomic insights into seed germination of Ferula assa-foetida">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-6" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> Cold stratification is known to affect the speed of seed germination; however, its regulation at the molecular level in <em>Ferula assa-foetida</em> remains ambiguous. Here, we used cold stratification (4 <sup>◦</sup>C in the dark) to induce germination in <i>F. assa-foetida</i> and adopted a proteomic and metabolomic approach to understand the molecular mechanism of germination. Compared to the control, we identified 209 non-redundant proteins and 96 metabolites in germinated <i>F. assa-foetida</i> seed. Results highlight the common and unique regulatory mechanisms like signaling cascade, reactivation of energy metabolism, activation of ROS scavenging system, DNA repair, gene expression cascade, cytoskeleton, and cell wall modulation in <i>F. assa-foetida</i> germination. A protein-protein interaction network identifies 18 hub protein species central to the interactome and could be a key player in <i>F. assa-foetida</i> germination. Further, the predominant metabolic pathways like glucosinolate biosynthesis, arginine and proline metabolism, cysteine and methionine metabolism, aminoacyl-tRNA biosynthesis, and carotenoid biosynthesis in germinating seed may indicate the regulation of carbon and nitrogen metabolism is prime essential to maintain the physiology of germinating seedlings. The findings of this study provide a better understanding of cold stratification-induced seed germination, which might be utilized for genetic modification and traditional breeding of <i>F. assa-foetida</i>. Seed germination is the fundamental checkpoint for plant growth and development, which has ecological significance. <i>F. assa-foetida</i> L., commonly known as “asafoetida,” is a medicinal and food crop with huge therapeutic potential. To date, our understanding of <i>F. assa-foetida</i> seed germination is rudimentary. Therefore, studying the molecular mechanism that governs dormancy decay and the onset of germination in <i>F. assa-foetida</i> is essential for understanding the basic principle of seed germination, which could offer to improve genetic modification and traditional breeding.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 7 -->
+          <article class="pub-card" data-pub-type="journal" data-pub-year="2022" data-profile="metabolomics">
+            <div class="pub-header-badges">
+              <span class="badge badge-journal">Journal Article</span>
+              <span class="badge badge-year">2022</span>
+              <span class="badge badge-if">Impact Factor: 2.9</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3164" target="_blank" rel="noopener noreferrer">
+                Identification and quantification of eight alkaloids in <em>Aconitum heterophyllum</em> using UHPLC‐DAD‐QTOF‐IMS: A valuable tool for quality control
+              </a>
+            </h2>
+            <p class="pub-authors">
+              <strong>Ashwani Punia</strong>, Robin Joshi, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">Phytochemical Analysis (Wiley)</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1002/pca.3164" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1002/pca.3164
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-7">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Punia, A., Joshi, R., &amp; Kumar, R. (2022). Identification and quantification of eight alkaloids in Aconitum heterophyllum using UHPLC-DAD-QTOF-IMS: A valuable tool for quality control. Phytochemical Analysis, 33(7), 1106-1117. https://doi.org/10.1002/pca.3164" data-bibtex="@article{punia2022identification, title={Identification and quantification of eight alkaloids in Aconitum heterophyllum using UHPLC-DAD-QTOF-IMS: A valuable tool for quality control}, author={Punia, Ashwani and Joshi, Robin and Kumar, Rajiv}, journal={Phytochemical Analysis}, volume={33}, number={7}, pages={1106--1117}, year={2022}, publisher={Wiley}, doi={10.1002/pca.3164}}" aria-label="Copy citation for Identification and quantification of eight alkaloids in Aconitum heterophyllum">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-7" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> <i>Aconitum </i>spp. are prime medicinal plants rich in alkaloids and have been used as the main constituents of traditional medicine in India and China. The whole plant can be toxic and creates pathophysiological conditions inside the human body. Therefore, simultaneous quantification of alkaloids within plant parts and herbal medicines associated with this genus is essential for quality control. We aimed to develop and validate methods using ultra-high-performance liquid chromatography–diode array detector–quadrupole time-of-flight ion mobility mass spectrometry (UHPLC-DAD-QTOF-IMS) and to develop an analytical strategy for the identification and quantification of alkaloid compounds (aconitine, hypaconitine, mesaconitine, aconine, benzoylmesaconitine, benzoylaconine, bulleyaconitine A, and deoxyaconitine) from <i>Aconitum heterophyllum</i>. We developed a simultaneous identification and quantification method for eight alkaloids using UHPLC-DAD-QTOF-IMS. The method was validated as per International Council for Harmonization of Technical Requirements for Pharmaceuticals for Human Use (ICH) guidelines and also in IMS mode. The developed method has good linearity (r<sup>2</sup> = 0.997–0.999), LOD (0.63– 8.31 μg/mL), LOQ (0.63–2.80 μg/mL), recovery (86.01–104.33%), reproducibility, intra- and inter-day variability (<3.25%), and stability. Significant qualitative and quantitative variations were found among different plant parts (flower, leaf, stem, root, and tuber) and five market products of <i>A. heterophyllum</i>. Furthermore, a total of 21 metabolites were also profiled based on the fragmentation pattern of MS<sup>2</sup> using the validated method. An appropriate mobile phase using acetonitrile and water in a gradient elution gave a satisfactory chromatographic separation of eight <i>Aconitum </i>alkaloids with their adjacent peaks. Therefore, this method could provide a scientific and technical platform for quality control assurance.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 8 -->
+          <article class="pub-card" data-pub-type="journal" data-pub-year="2021" data-profile="proteomics">
+            <div class="pub-header-badges">
+              <span class="badge badge-journal">Journal Article</span>
+              <span class="badge badge-year">2021</span>
+              <span class="badge badge-if">Impact Factor: 5.6</span>
+            </div>
+            <h2 class="pub-title">
+              <a href="https://link.springer.com/article/10.1186/s12870-021-03394-8" target="_blank" rel="noopener noreferrer">
+                In-depth assembly of organ and development dissected <em>Picrorhiza kurroa</em> proteome map using mass spectrometry
+              </a>
+            </h2>
+            <p class="pub-authors">
+              Manglesh Kumari, Upendra Kumar Pradhan, Robin Joshi, <strong>Ashwani Punia</strong>, Ravi Shankar, Rajiv Kumar
+            </p>
+            <div class="pub-meta-row">
+              <span class="pub-journal-name">BMC Plant Biology (Springer Nature)</span>
+              <span class="pub-meta-separator" aria-hidden="true">|</span>
+              <a href="https://doi.org/10.1186/s12870-021-03394-8" target="_blank" rel="noopener noreferrer" class="pub-doi-pill" title="Open persistent DOI link">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DOI: 10.1186/s12870-021-03394-8
+              </a>
+            </div>
+            <div class="pub-card-actions">
+              <button type="button" class="pub-accordion-toggle" aria-expanded="false" aria-controls="pub-abstract-8">
+                <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+                <span>View Abstract</span>
+              </button>
+              <button type="button" class="copy-cite-btn" data-citation="Kumari, M., Pradhan, U. K., Joshi, R., Punia, A., Shankar, R., &amp; Kumar, R. (2021). In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map using mass spectrometry. BMC Plant Biology, 21(1), 592. https://doi.org/10.1186/s12870-021-03394-8" data-bibtex="@article{kumari2021indepth, title={In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map using mass spectrometry}, author={Kumari, Manglesh and Pradhan, Upendra Kumar and Joshi, Robin and Punia, Ashwani and Shankar, Ravi and Kumar, Rajiv}, journal={BMC Plant Biology}, volume={21}, number={1}, pages={592}, year={2021}, publisher={Springer Nature}, doi={10.1186/s12870-021-03394-8}}" aria-label="Copy citation for In-depth assembly of organ and development dissected Picrorhiza kurroa proteome map">
+                <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                <span>Copy Citation</span>
+              </button>
+            </div>
+            <div id="pub-abstract-8" class="pub-accordion-content" hidden>
+              <div class="pub-abstract-inner">
+                <p><strong>Abstract:</strong> <i>Picrorhiza kurroa</i> Royle ex Benth. being a rich source of phytochemicals, is a promising high altitude medicinal herb of Himalaya. The medicinal potential is attributed to picrosides i.e. iridoid glycosides, which synthesized in organ-specifc manner through highly complex pathways. Here, we present a large-scale proteome reference map of <i>P. kurroa</i>, consisting of four morphologically diferentiated organs and two developmental stages. We were able to identify 5186 protein accessions (FDR<1%) providing a deep coverage of protein abundance array, spanning around six orders of magnitude. Most of the identifed proteins are associated with metabolic processes, response to abiotic stimuli and cellular processes. Organ specifc sub-proteomes highlights organ specialized functions that would offer insights to explore tissue profle for specifc protein classes. With reference to <i>P. kurroa</i> development, vegetative phase is enriched with growth related processes, however generative phase harvests more energy in secondary metabolic pathways. Furthermore, stress-responsive proteins, RNA binding proteins (RBPs) and post-translational modifcations (PTMs), particularly phosphorylation and ADP-ribosylation play an important role in <i>P. kurroa</i> adaptation to alpine environment. The proteins involved in the synthesis of secondary metabolites are well represented in <i>P. kurroa</i> proteome. The phytochemical analysis revealed that marker compounds were highly accumulated in rhizome and overall, during the late stage of development. This report represents frst extensive proteomic description of organ and developmental dissected P<i>P. kurroa</i>, providing a platform for future studies related to stress tolerance and medical applications. </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State (Shown when search/filter returns 0 matches) -->
+        <div id="pub-empty-state" class="pub-empty-state" hidden>
+          <div class="pub-empty-icon"><i class="fa-solid fa-book-open"></i></div>
+          <div class="pub-empty-title">No matching publications found</div>
+          <p style="color: var(--color-text-muted); max-width: 480px; margin: 0 auto 1.25rem;">
+            No published record matched your current search criteria. Try modifying your search keywords or resetting active year/type filters.
+          </p>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('pub-clear-btn').click()">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reset All Filters
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Shared Institutional Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <div class="footer-brand-title">Dr. Ashwani Punia, PhD</div>
+          <div class="footer-brand-role">Biochemist &amp; Mass Spectrometry Specialist</div>
+          <p class="footer-brand-desc">
+            CSIR-Institute of Himalayan Bioresource Technology (CSIR-IHBT), Palampur, HP, India &amp; Academy of Scientific and Innovative Research (AcSIR). Dedicated to advancing metabolomics, proteomics, and therapeutic natural product chemistry.
+          </p>
+          <div class="hero-profiles" style="border: none; padding-top: 0;">
+            <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=en&amp;user=cunYBgoAAAAJ" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="Google Scholar" aria-label="Google Scholar profile">
+              <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+            </a>
+            <a href="https://orcid.org/0009-0001-9700-7668" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="ORCID Profile" aria-label="ORCID profile">
+              <i class="fa-brands fa-orcid" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.researchgate.net/profile/Ashwani-Punia-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="ResearchGate" aria-label="ResearchGate profile">
+              <i class="fa-brands fa-researchgate" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ashwani-punia-a8b10917b/" target="_blank" rel="noopener noreferrer" class="profile-icon-link" title="LinkedIn" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Portfolio Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home / Profile</a></li>
+            <li><a href="skills.html" class="footer-link">Technical Competencies</a></li>
+            <li><a href="experience.html" class="footer-link">Research Experience</a></li>
+            <li><a href="education.html" class="footer-link">Academic Education</a></li>
+            <li><a href="publications.html" class="footer-link">Scholarly Publications</a></li>
+            <li><a href="awards.html" class="footer-link">Honors &amp; Awards</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact &amp; Affiliation</div>
+          <ul class="footer-links-list">
+            <li><span style="color: var(--color-text-muted);"><i class="fa-solid fa-location-dot" style="margin-right: 0.4rem;" aria-hidden="true"></i> CSIR-IHBT, Palampur, HP, India</span></li>
+            <li><a href="mailto:ashwanipunia@yahoo.com" class="footer-link"><i class="fa-solid fa-envelope" style="margin-right: 0.4rem;" aria-hidden="true"></i> ashwanipunia@yahoo.com</a></li>
+            <li><a href="mailto:ashwani.ihbt20a@acsir.res.in" class="footer-link"><i class="fa-solid fa-envelope-open" style="margin-right: 0.4rem;" aria-hidden="true"></i> ashwani.ihbt20a@acsir.res.in</a></li>
+            
+            <li style="margin-top: 1rem;"><a href="Ashwani_Punia_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-link" style="display: inline-flex;"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Curriculum Vitae (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Dr. Ashwani Punia. All rights reserved.
+        </div>
+        <div class="footer-logo-wrap">
+          <img src="logo.png" alt="CSIR-IHBT Institutional Logo" width="180" height="36">
+        </div>
+        <div>
+          <button class="back-to-top" type="button" aria-label="Back to top of page">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
